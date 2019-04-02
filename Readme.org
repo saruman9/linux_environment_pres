@@ -9,8 +9,8 @@
 
 ↑Title for Windows users↑
 
-#+ATTR_ORG: :width 800
-[[file:images/linux_penguin_security.jpg]]
+#+ATTR_ORG: :width 900
+[[file:images/linux_matrix.jpg]]
 
 * Introduction. Motivation
 
