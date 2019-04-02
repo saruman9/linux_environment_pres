@@ -1,0 +1,43 @@
+#+STARTUP: indent
+#+STARTUP: noinlineimages
+
+#+TITLE: How to survive^Wlive with Linux
+#+AUTHOR: Abc Xyz
+#+EMAIL: @dura_lex
+
+* How to +survive+ live with Linux 
+
+↑Title for Windows users↑
+
+#+ATTR_ORG: :width 800
+[[file:images/linux_penguin_security.jpg]]
+
+* Introduction. Motivation
+
+- Many questions about tools/tips/scripting/etc in Linux
+- Many mentions about my live with Linux
+- You should know, what you are losing
+
+* Introduction. Background
+
+- First time in 2007 ([[https://xakep.ru/2007/02/26/36939/][Windows Vista vs Mandriva: какую ОС выбрать в 2007 году?]])
+- Mandriva, Ubuntu, Runtu, Fedora, Debian, Slackware, SUSE, MeeGo, NixOS,
+  GuixSD, CentOS, Calculate, Gentoo, BolgenOS, OpenWRT, webOS, ChromiumOS,
+  AstraLinux, AltLinux, Mageia, Moblin, Linux Mint, Xubuntu, Kubunutu, Knoppix,
+  Damn Vulnerable Linux, Backtrack, Mythbuntu, SteamOS, Mandrake, many others
+- Arch Linux since 2013
+
+* Introduction. Disclaimer
+
+Something can always go wrong...
+
+* KISS
+
+Keep It Simple, Stupid
+
+* TUI
+
+Text-based user interface
+
+#+ATTR_ORG: :width 900
+[[./images/Fdedit.png]]
