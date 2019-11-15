@@ -5,20 +5,22 @@
 #+AUTHOR: Abc Xyz
 #+EMAIL: @dura_lex
 
-* How to +survive+ live with Linux 
+* How to +survive+ live with Linux
 
 ↑Title for Windows users↑
 
 #+ATTR_ORG: :width 900
 [[file:images/linux_matrix.jpg]]
 
-* Introduction. Motivation
+* Introduction
+** Motivation
 
 - Many questions about tools/tips/scripting/etc in Linux
 - Many mentions about my live with Linux
-- You should know, what you are losing
+- You should know, what you are losing (Linux vs Windows)
+- Sharing experience and knowledge
 
-* Introduction. Background
+** Background
 
 - First time in 2007 ([[https://xakep.ru/2007/02/26/36939/][Windows Vista vs Mandriva: какую ОС выбрать в 2007 году?]])
 - Mandriva, Ubuntu, Runtu, Fedora, Debian, Slackware, SUSE, MeeGo, NixOS,
@@ -26,18 +28,118 @@
   AstraLinux, AltLinux, Mageia, Moblin, Linux Mint, Xubuntu, Kubunutu, Knoppix,
   Damn Vulnerable Linux, Backtrack, Mythbuntu, SteamOS, Mandrake, many others
 - Arch Linux since 2013
+- Open source community member (maintainer, developer)
 
-* Introduction. Disclaimer
+** Disclaimer
+
+I'm evangelist of my software
 
 Something can always go wrong...
 
-* KISS
+* Principles
+** KISS
 
 Keep It Simple, Stupid
 
-* TUI
+** TUI
 
 Text-based user interface
 
 #+ATTR_ORG: :width 900
 [[./images/Fdedit.png]]
+
+** CLI
+
+Console-based user interface
+
+* OS
+** ArchLinux
+** Why not others?
+*** Ubuntu, Fedora, Mint, Manjaro, etc
+
+Because it is very fat OSs:
+- a lot of unused software
+- many configuration files
+- a lot of strange behavior
+
+But for something it's useful
+
+*** Gentoo, LFS
+
+Fuss too much with them
+
+*** NixOS, GuixSD
+
+DSL, some issues, FHS
+
+Very unstable, libre OS
+
+* Software
+
+Not replace, but alternatives
+
+For scripts you should use first order applications for comparability
+
+It's normal, that more than half applications were developed in Rust language
+
+** Core utilities
+*** Bash — Zsh
+*** ls — exa
+*** cat + less, more — bat
+*** cp, mv, rm — rsync
+
+=-i= for prompting the user before the action
+
+*** du — ncdu
+*** tar, (un)zip — bsdtar, 7z
+*** find — fd
+*** diff — git-diff, colordiff
+
+More powerful, more futures
+
+**** vimdiff (VIM), ediff (Emacs)
+
+Powerful interactive tools
+
+3-way diff
+
+*** grep — ripgrep
+
+- faster
+- multiline grep
+- powerful regexp on Rust
+- modern
+- rgall replace find + grep
+
+*** sed, {g,n,m}awk
+
+You should use it more often
+
+*** dmesg — journalctl
+
+- filters
+- all info from syslog, dmesg, other logging systems
+
+*** (u)mount — udisks2
+
+Mounting with user's permissions
+
+Manipulating by systemd
+
+*** Shell built-ins
+
+alias type time
+
+*** Other useful core utilities
+
+- ls{blk,pci,cpu,usb}
+- sudo, but not su (sudoedit for editing files)
+- kill, pkill, killall
+- pgrep, pidof
+- ps, free, top, htop
+
+* Tips'n'Tricks or fully automation
+** Metro workflow
+
+Edit, git add
+
