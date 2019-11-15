@@ -52,6 +52,8 @@ Text-based user interface
 
 Console-based user interface
 
+Easy for using and porting (for example, mobile phone)
+
 * OS
 ** ArchLinux
 ** Why not others?
@@ -143,3 +145,8 @@ alias type time
 
 Edit, git add
 
+* Summary
+
+10% of all, needed time
+
+Needed person, who can say me: "It's useful, taste it"
