@@ -78,15 +78,21 @@ Very unstable, libre OS
 
 * Software
 
+Only my experience, but exist very very much others utilities
+
+** Core utilities
+
+Utilities stable but old and have few features
+
 Not replace, but alternatives
 
-For scripts you should use first order applications for comparability
+For scripts you should use first order applications for compatability
 
 It's normal, that more than half applications were developed in Rust language
 
-** Core utilities
 *** Bash — Zsh
-*** ls — exa
+*** ls — lsd
+*** tree — exa
 *** cat + less, more — bat
 *** cp, mv, rm — rsync
 
@@ -130,8 +136,24 @@ Manipulating by systemd
 
 *** Shell built-ins
 
-alias type time
+- alias
+- type
+- time
 
+Other functions
+
+*** Simple and useful tools for RE and etc
+**** tee
+**** mktemp
+**** tr
+**** cut
+**** od, xxd, hexdump
+**** sort, uniq, comm
+**** head, tail
+**** wc
+**** strings
+**** iconv
+**** file
 *** Other useful core utilities
 
 - ls{blk,pci,cpu,usb}
@@ -139,6 +161,30 @@ alias type time
 - kill, pkill, killall
 - pgrep, pidof
 - ps, free, top, htop
+
+** Internet
+*** Network managers
+
+- NetworkManager (nmcli, nmtui)
+- systemd-networkd
+
+*** Tor and I2P
+
+torify, SOCKS
+
+*** Web browsers
+**** CLI, TUI
+
+- w3m
+- elinks
+
+**** Firefox
+
+Others unstable and have less features (based on webkit, didn't have Rust): luakit, surf, qutebrowser
+
+Pendactyl for LSR
+Tridactyl after updates
+VimiumC
 
 * Tips'n'Tricks or fully automation
 ** Metro workflow
@@ -150,3 +196,4 @@ Edit, git add
 10% of all, needed time
 
 Needed person, who can say me: "It's useful, taste it"
+
