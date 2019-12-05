@@ -186,6 +186,71 @@ Pendactyl for LSR
 Tridactyl after updates
 VimiumC
 
+*** yotube-dl
+
+mpv + tridactyl
+In i3 scratchpad
+
+*** curl — httpie
+
+Nice format, simple using
+
+*** wget — aria2
+
+More fast, can download torrents, more protocols
+
+*** Cloud storages
+
+WebDAV
+gvfs with encryption
+
+*** Torrents
+**** Transmission
+
+Server
+Mobile client
+CLI client for scripts + TUI client - tremc
+
+**** peerflix
+
+Needed replace developed in Rust
+
+Auto sync with transmission for speedup
+
+*** Mail
+**** neomutt
+
+notmuch
+
+offlineimap
+
+*** Messengers
+
+BitlBee — gateway
+WeeChat — IRC
+MCabber, profanity — XMPP
+toxic — tox
+tg-cli — telegram, but telegram desktop also
+Try to forward all to XMPP, but it was very hard
+
+*** RSS, news
+
+newsboat
+
+Aggregate from all
+
+Later create channels with bot, which send RSS to channel
+Also use Twitter to RSS
+
+Now I don't read news, very much time, which I can spend for developing
+
+*** Remote desktop
+
+For easy task use ssh with X forwarding, use settings for compress and encrypting traffic for speedup
+For hard task use VNC
+
+Also I use qemu with SPICE and connect through VNC
+
 * Tips'n'Tricks or fully automation
 ** Metro workflow
 
