@@ -251,6 +251,38 @@ For hard task use VNC
 
 Also I use qemu with SPICE and connect through VNC
 
+** Multimedia
+*** Image viewers
+**** Framebuffer
+
+- fbi
+- fbv
+
+**** Simple
+
+- feh
+- vimiv
+- sxiv
+
+*** ImageMagick
+
+Very powerful image processing tool
+
+*** Music
+**** mpd
+
+Server with clients:
+- mobile
+- GUI
+- TUI
+- CLI
+
+**** mpdscribble
+**** pianobar
+
+Online radio
+
+*** Video
 * Tips'n'Tricks or fully automation
 ** Metro workflow
 
