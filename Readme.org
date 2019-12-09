@@ -113,6 +113,8 @@ In i3 scratchpad
 
 Nice format, simple using
 
+jq for JSON
+
 *** wget — aria2
 
 More fast, can download torrents, more protocols
@@ -141,6 +143,8 @@ Auto sync with transmission for speedup
 notmuch
 
 offlineimap
+
+GPG
 
 *** Messengers
 
@@ -262,9 +266,43 @@ You should learn it.
 Gitea, GitLab
 Use everywhere
 
-*** Hex
+** Text editing
 
-r2, xxd, hexdump
+Don't use doc{,x} ppt, xls and others
+
+*** VIM
+*** Emacs
+*** Spacemacs
+*** LaTeX
+*** Org mode
+
+This presentation created in org mode
+
+*** AsciiDoc
+
+Many features
+
+*** Markdown
+
+For work
+
+*** Pandoc
+*** Zathura
+
+For all + evince
+
+*** OCR
+
+Tesseract
+
+*** Dictionary and translation
+
+Scripts and GoldenDict
+
+*** Spell checkers
+
+Everywhere
+Aspell, hunspell + LanguageTool for grammars
 
 ** Core utilities
 
@@ -355,6 +393,11 @@ Other functions
 *** Systemd
 
 vs SYSinitV
+
+** Security
+*** Password manager
+
+pass
 
 * Tips'n'Tricks or fully automation
 ** Metro workflow
