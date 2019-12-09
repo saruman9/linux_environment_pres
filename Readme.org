@@ -80,88 +80,6 @@ Very unstable, libre OS
 
 Only my experience, but exist very very much others utilities
 
-** Core utilities
-
-Utilities stable but old and have few features
-
-Not replace, but alternatives
-
-For scripts you should use first order applications for compatability
-
-It's normal, that more than half applications were developed in Rust language
-
-*** Bash — Zsh
-*** ls — lsd
-*** tree — exa
-*** cat + less, more — bat
-*** cp, mv, rm — rsync
-
-=-i= for prompting the user before the action
-
-*** du — ncdu
-*** tar, (un)zip — bsdtar, 7z
-*** find — fd
-*** diff — git-diff, colordiff
-
-More powerful, more futures
-
-**** vimdiff (VIM), ediff (Emacs)
-
-Powerful interactive tools
-
-3-way diff
-
-*** grep — ripgrep
-
-- faster
-- multiline grep
-- powerful regexp on Rust
-- modern
-- rgall replace find + grep
-
-*** sed, {g,n,m}awk
-
-You should use it more often
-
-*** dmesg — journalctl
-
-- filters
-- all info from syslog, dmesg, other logging systems
-
-*** (u)mount — udisks2
-
-Mounting with user's permissions
-
-Manipulating by systemd
-
-*** Shell built-ins
-
-- alias
-- type
-- time
-
-Other functions
-
-*** Simple and useful tools for RE and etc
-**** tee
-**** mktemp
-**** tr
-**** cut
-**** od, xxd, hexdump
-**** sort, uniq, comm
-**** head, tail
-**** wc
-**** strings
-**** iconv
-**** file
-*** Other useful core utilities
-
-- ls{blk,pci,cpu,usb}
-- sudo, but not su (sudoedit for editing files)
-- kill, pkill, killall
-- pgrep, pidof
-- ps, free, top, htop
-
 ** Internet
 *** Network managers
 
@@ -283,6 +201,161 @@ Server with clients:
 Online radio
 
 *** Video
+**** Players
+
+mpv most powerful video/audio player
+cvlc CLI version of VLC
+
+**** FFmpeg
+
+Converting, hardware rendering, screencasting, input/output many formats (camera, screens, devices)
+
+*** Metadata
+
+ExifTool
+exiv2
+
+Many interesting things you can know from metadata of video, images and data
+
+*** File transfer
+
+Android file transfer, MTP
+OpenDrop, AirDrop
+WiFi server
+
+** Utilities
+*** Terminal emulators
+
+urxvt with many patches and plugins developed in Perl, old
+Alacritty GPU rendering, Rust, many features, but simple
+Kitty Python, many features, slow with tmux, GPU, Unicode, many nice bindings
+
+*** Multiplexers. tmux
+
+byobu
+
+*** File managers
+**** ranger
+
+Python, features, slow
+
+**** vifm
+
+C, VIM, features
+Batch renaming
+Diffing
+Filtering
+Searching
+
+*** Synchronization
+
+Syncthing
+Unison
+
+*** restic for backups
+
+Snapshots, encrypted, many protocols + systemd
+
+*** Git
+
+You should learn it.
+Gitea, GitLab
+Use everywhere
+
+*** Hex
+
+r2, xxd, hexdump
+
+** Core utilities
+
+Utilities stable but old and have few features
+
+Not replace, but alternatives
+
+For scripts you should use first order applications for compatability
+
+It's normal, that more than half applications were developed in Rust language
+
+*** Bash — Zsh
+*** ls — lsd
+*** tree — exa
+*** cat + less, more — bat
+*** cp, mv, rm — rsync
+
+=-i= for prompting the user before the action
+
+Also backups
+
+*** du — ncdu
+*** tar, (un)zip — bsdtar, 7z
+*** find — fd
+*** diff — git-diff, colordiff
+
+More powerful, more future
+
+colordiff, diffoscope
+
+**** vimdiff (VIM), ediff (Emacs)
+
+Powerful interactive tools
+
+3-way diff
+
+*** grep — ripgrep
+
+- faster
+- multiline grep
+- powerful regexp on Rust
+- modern
+- rgall replace find + grep
+
+*** sed, {g,n,m}awk
+
+You should use it more often
+
+*** dmesg — journalctl
+
+- filters
+- all info from syslog, dmesg, other logging systems
+
+*** (u)mount — udisks2
+
+Mounting with user's permissions
+
+Manipulating by systemd
+
+*** Shell built-ins
+
+- alias
+- type
+- time
+
+Other functions
+
+*** Simple and useful tools for RE and etc
+**** tee
+**** mktemp
+**** tr
+**** cut
+**** od, xxd, hexdump
+**** sort, uniq, comm
+**** head, tail
+**** wc
+**** strings
+**** iconv
+**** file
+*** Other useful core utilities
+
+- ls{blk,pci,cpu,usb}
+- sudo, but not su (sudoedit for editing files)
+- kill, pkill, killall
+- pgrep, pidof
+- ps, free, top, htop
+
+*** Systemd
+
+vs SYSinitV
+
 * Tips'n'Tricks or fully automation
 ** Metro workflow
 
