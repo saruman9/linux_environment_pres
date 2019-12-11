@@ -409,9 +409,57 @@ Notification
 
 *** Clipboard manager
 * Tips'n'Tricks or fully automation
+** Configurations
+
+Chezmoi — sync configs for everything.
+
+Check directories and files in home directory and delete it or add to ignore list or add to configuration list files.
+
+Check unneeded packages and install new or delete unneeded.
+
+You can encrypt files, part of elements, use different configurations for different machines.
+
+** VIM/Emacs everywhere
+
+Don't use mouse, because it need more time, than keyboard. Home row of your keyboard is your friend: speedup, less fever.
+
+Xdotool + Emacs = edit everything in Emacs
+
+VIM/Emacs keymaps and modes everything: browser, IDE (IDEA, eclipse, etc), windows manager, multiplexer, music player, torrent manipulation programs, mail, everything except Ghidra.
+
+** Presentations, reports, documents
+
+Only plaintext, because you can diffing and use git for that.
+
+I can convert org mode (asciidoc) to everything: plaintext, static HTML, LaTeX, PDF, presentations (beamer, reveal.js).
+
+I can share sources and use parts of already wrote items.
+
+I have many notes with ideas, presentations.
+
+I sync between machines reports, documents for working with everywhere.
+
 ** Metro workflow
 
 Edit, git add
+
+Org mode, orgzly, git on mobile
+
+** Mobile phone
+
+Use open source utilities: F-Droid.
+
+Use Termux actively: ssh, running all Linux stuff (tmux and my rust programs), share Chezmoi configs. 
+
+** Router, multimedia box
+
+All works on the ArchLinux.
+
+** Packages and open source
+
+It's cause why I not use NixOS. 
+
+I have custom PKGBUILDs for all patched software (also cracks^Winitial settings for proprietary software). I also maintainer of some packages in AUR and regulate other packages (ask update, delete, permissions of maintaining).
 
 * Summary
 
