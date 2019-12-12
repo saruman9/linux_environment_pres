@@ -455,11 +455,21 @@ Use Termux actively: ssh, running all Linux stuff (tmux and my rust programs), s
 
 All works on the ArchLinux.
 
+Pihole, multimedia combine player, I forget name.
+
 ** Packages and open source
 
 It's cause why I not use NixOS. 
 
 I have custom PKGBUILDs for all patched software (also cracks^Winitial settings for proprietary software). I also maintainer of some packages in AUR and regulate other packages (ask update, delete, permissions of maintaining).
+
+** Automate everything
+
+Follow for the tickets, news, sites (scripts in Python, PHP, Rust).
+
+First target was CDO. I don't like specific subjects, but need info about it: I wrote bot for VK, which sent me messages and documents from group. Hack the CDO.
+
+No ads everywhere, scripting blocks for even complex ads from Yandex. 
 
 * Summary
 
