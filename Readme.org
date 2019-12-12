@@ -191,6 +191,9 @@ Also I use qemu with SPICE and connect through VNC
 Very powerful image processing tool
 
 *** Music
+
+I don't like music streaming services, because too much choices. I have player, which firmware is open source, I create tools for syncing playlists. I create mini iTunes. 
+
 **** mpd
 
 Server with clients:
@@ -445,6 +448,8 @@ Edit, git add
 
 Org mode, orgzly, git on mobile
 
+I don't use social networks and don't read news, I try to create and structure my knowledge. It's very helpful for me. 
+
 ** Mobile phone
 
 Use open source utilities: F-Droid.
@@ -470,6 +475,11 @@ Follow for the tickets, news, sites (scripts in Python, PHP, Rust).
 First target was CDO. I don't like specific subjects, but need info about it: I wrote bot for VK, which sent me messages and documents from group. Hack the CDO.
 
 No ads everywhere, scripting blocks for even complex ads from Yandex. 
+
+** Statistics about everything
+
+I inspect everything: our family budget, the books that I read, movies and serials that I watched, my sports actions, party board games, etc. I use text files for managing it all, I can filter, create reports, sharing information between machines, all is encrypted. 
+I use GUI or sites for something tasks, because my wife can't use my tools. I export information from this and continue use my tools for that.
 
 * Summary
 
