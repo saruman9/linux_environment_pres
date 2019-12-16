@@ -489,3 +489,5 @@ Needed person, who can say me: "It's useful, taste it"
 
 I want to create smart home, but it's very hard, because you should create user-friendly interface. 
 
+You must read [[https://github.com/jlevy/the-art-of-command-line][this]], because I don't want to share information, which already exist in structural forms. 
+
