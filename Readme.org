@@ -113,8 +113,6 @@ In i3 scratchpad
 
 Nice format, simple using
 
-jq for JSON
-
 *** wget — aria2
 
 More fast, can download torrents, more protocols
@@ -275,6 +273,9 @@ Don't use doc{,x} ppt, xls and others
 
 *** VIM
 *** Emacs
+
+Rust ♥️ Emacs = remacs
+
 *** Spacemacs
 *** LaTeX
 *** Org mode
@@ -328,6 +329,9 @@ It's normal, that more than half applications were developed in Rust language
 Also backups
 
 *** du — ncdu
+
+sn — developed in Rust, multithreads, speedup
+
 *** tar, (un)zip — bsdtar, 7z
 *** find — fd
 *** diff — git-diff, colordiff
@@ -385,6 +389,50 @@ Other functions
 **** strings
 **** iconv
 **** file
+*** Rust section
+
+Install rustup
+
+cargo install and you on the horse
+
+**** tokei
+
+Rust
+
+Inspect source code
+
+**** jq
+
+JSON prettifier
+
+**** xsv
+
+Rust
+
+Very fast parsing of large CSV files
+
+**** fselect
+
+Rust
+
+Finding on file system with SQL queries. Find + ls + awk
+
+**** bingrep
+
+Color readelf, more powerful grep for elf files
+
+**** ripgrepall
+
+Find everywhere: binary files, PDFs, images, music, video, etc
+
+**** stringsext
+
+Better searching Unicode strings, but performance may be better
+
+**** tealdeer
+
+tldr, documentation
+
 *** Other useful core utilities
 
 - ls{blk,pci,cpu,usb}
