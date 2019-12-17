@@ -496,7 +496,9 @@ Edit, git add
 
 Org mode, orgzly, git on mobile
 
-I don't use social networks and don't read news, I try to create and structure my knowledge. It's very helpful for me. 
+I don't use social networks and don't read news, I try to create and structure my knowledge. It's very helpful for me.
+
+Read issues, developers lists, write answers.
 
 ** Mobile phone
 
@@ -537,5 +539,7 @@ Needed person, who can say me: "It's useful, taste it"
 
 I want to create smart home, but it's very hard, because you should create user-friendly interface. 
 
-You must read [[https://github.com/jlevy/the-art-of-command-line][this]], because I don't want to share information, which already exist in structural forms. 
+You must read [[https://github.com/jlevy/the-art-of-command-line][this]], because I don't want to share information, which already exist in structural forms.
+
+[[https://suckless.org/rocks/][Suckless]]. Develops many useful apps, but it's very minimal. One app — one function, you need recompile program for changing settings. 
 
