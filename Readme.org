@@ -411,6 +411,8 @@ Rust
 
 Very fast parsing of large CSV files
 
+miller have more features
+
 **** fselect
 
 Rust
@@ -541,5 +543,7 @@ I want to create smart home, but it's very hard, because you should create user-
 
 You must read [[https://github.com/jlevy/the-art-of-command-line][this]], because I don't want to share information, which already exist in structural forms.
 
-[[https://suckless.org/rocks/][Suckless]]. Develops many useful apps, but it's very minimal. One app — one function, you need recompile program for changing settings. 
+Like a book about CLI — https://github.com/learnbyexample/Command-line-text-processing.
+
+[[https://suckless.org/rocks/][Suckless]]. Develops many useful apps, but it's very minimal. One app — one function, you need recompile program for changing settings.
 
