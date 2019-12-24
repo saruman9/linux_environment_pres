@@ -1,34 +1,113 @@
 #+STARTUP: indent
 #+STARTUP: noinlineimages
 
+#+OPTIONS: reveal_mathjax:t
+#+OPTIONS: reveal_slide_number:c/t
+#+OPTIONS: reveal_history:t
+#+OPTIONS: toc:nil
+#+REVEAL_HLEVEL: 2
+#+REVEAL_TRANS: linear
+#+REVEAL_TITLE_SLIDE:<h1>%t</h1><p>%a</p><p><a href="https://t.me/dura_lex">@dura_lex</a></p>
+#+REVEAL_THEME: black
+
 #+TITLE: How to survive^Wlive with Linux
 #+AUTHOR: Abc Xyz
 #+EMAIL: @dura_lex
 
 * How to +survive+ live with Linux
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
 
 ↑Title for Windows users↑
 
-#+ATTR_ORG: :width 900
-[[file:images/linux_matrix.jpg]]
+* Table of Contents
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+#+REVEAL_TOC: headlines 1
 
 * Introduction
 ** Motivation
 
+#+ATTR_REVEAL: :frag (appear)
 - Many questions about tools/tips/scripting/etc in Linux
-- Many mentions about my live with Linux
+- Many mentions about my life with Linux
 - You should know, what you are losing (Linux vs Windows)
 - Sharing experience and knowledge
 
+#+BEGIN_NOTES
+- Часто спрашивают совета при работе в Linux, какие инструменты использую.
+- Частенько не обходится без шуток. Странно, что сейчас не пошутили, пока всё настраивал.
+- Windows не позволяет делать множество вещей.
+- В очередной раз хочу рассказать о том, в чём сам разобрался.
+#+END_NOTES
+
 ** Background
 
-- First time in 2007 ([[https://xakep.ru/2007/02/26/36939/][Windows Vista vs Mandriva: какую ОС выбрать в 2007 году?]])
-- Mandriva, Ubuntu, Runtu, Fedora, Debian, Slackware, SUSE, MeeGo, NixOS,
-  GuixSD, CentOS, Calculate, Gentoo, BolgenOS, OpenWRT, webOS, ChromiumOS,
-  AstraLinux, AltLinux, Mageia, Moblin, Linux Mint, Xubuntu, Kubunutu, Knoppix,
-  Damn Vulnerable Linux, Backtrack, Mythbuntu, SteamOS, Mandrake, many others
-- Arch Linux since 2013
-- Open source community member (maintainer, developer)
+First time in 2006 ([[https://xakep.ru/2007/02/26/36939/][Windows Vista vs Mandriva: какую ОС
+  выбрать в 2007 году?]])
+
+#+ATTR_HTML: :width 30%
+[[./images/xakep.jpg]]
+
+#+BEGIN_NOTES
+Дядя подарил журнал Хакер, на диске которого была Mandriva и *FreeBSD*. Со второй я вообще не понял,
+что нужно было делать, т. к. на тот момент *было 12 лет*, а первая заинтересовала, потому что
+компьютер был слабый и Windows Vista не тянул, а рабочий стол в виде *вращающегося куба* хотелось.
+#+END_NOTES
+
+#+REVEAL: split
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 30%">
+- Mandriva
+- Ubuntu
+- Runtu
+- Fedora
+- Debian
+- Slackware
+- SUSE
+- MeeGo
+- NixOS
+- GuixSD
+- Xubuntu
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 30%">
+- CentOS
+- Calculate
+- Gentoo
+- BolgenOS
+- OpenWRT
+- webOS
+- ChromiumOS
+- AstraLinux
+- AltLinux
+- Mageia
+- Moblin
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 30%">
+- Linux Mint
+- Kubunutu
+- Knoppix
+- Damn Vulnerable Linux
+- Backtrack
+- Mythbuntu
+- SteamOS
+- Mandrake
+- many others
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+Arch Linux since 2013
+
+#+ATTR_HTML: :width 70%
+[[./images/archlinux_logo.png]]
+
+#+REVEAL: split
+Open source community member (maintainer, developer)
 
 ** Disclaimer
 
@@ -190,7 +269,7 @@ Very powerful image processing tool
 
 *** Music
 
-I don't like music streaming services, because too much choices. I have player, which firmware is open source, I create tools for syncing playlists. I create mini iTunes. 
+I don't like music streaming services, because too much choices. I have player, which firmware is open source, I create tools for syncing playlists. I create mini iTunes.
 
 **** mpd
 
@@ -506,7 +585,7 @@ Read issues, developers lists, write answers.
 
 Use open source utilities: F-Droid.
 
-Use Termux actively: ssh, running all Linux stuff (tmux and my rust programs), share Chezmoi configs. 
+Use Termux actively: ssh, running all Linux stuff (tmux and my rust programs), share Chezmoi configs.
 
 ** Router, multimedia box
 
@@ -516,7 +595,7 @@ Pihole, multimedia combine player, I forget name.
 
 ** Packages and open source
 
-It's cause why I not use NixOS. 
+It's cause why I not use NixOS.
 
 I have custom PKGBUILDs for all patched software (also cracks^Winitial settings for proprietary software). I also maintainer of some packages in AUR and regulate other packages (ask update, delete, permissions of maintaining).
 
@@ -526,11 +605,11 @@ Follow for the tickets, news, sites (scripts in Python, PHP, Rust).
 
 First target was CDO. I don't like specific subjects, but need info about it: I wrote bot for VK, which sent me messages and documents from group. Hack the CDO.
 
-No ads everywhere, scripting blocks for even complex ads from Yandex. 
+No ads everywhere, scripting blocks for even complex ads from Yandex.
 
 ** Statistics about everything
 
-I inspect everything: our family budget, the books that I read, movies and serials that I watched, my sports actions, party board games, etc. I use text files for managing it all, I can filter, create reports, sharing information between machines, all is encrypted. 
+I inspect everything: our family budget, the books that I read, movies and serials that I watched, my sports actions, party board games, etc. I use text files for managing it all, I can filter, create reports, sharing information between machines, all is encrypted.
 I use GUI or sites for something tasks, because my wife can't use my tools. I export information from this and continue use my tools for that.
 
 * Summary
@@ -539,11 +618,10 @@ I use GUI or sites for something tasks, because my wife can't use my tools. I ex
 
 Needed person, who can say me: "It's useful, taste it"
 
-I want to create smart home, but it's very hard, because you should create user-friendly interface. 
+I want to create smart home, but it's very hard, because you should create user-friendly interface.
 
 You must read [[https://github.com/jlevy/the-art-of-command-line][this]], because I don't want to share information, which already exist in structural forms.
 
 Like a book about CLI — https://github.com/learnbyexample/Command-line-text-processing.
 
 [[https://suckless.org/rocks/][Suckless]]. Develops many useful apps, but it's very minimal. One app — one function, you need recompile program for changing settings.
-
