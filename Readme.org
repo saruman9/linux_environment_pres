@@ -17,6 +17,7 @@
 * How to +survive+ live with Linux
 :PROPERTIES:
 :UNNUMBERED: notoc
+:REVEAL_BACKGROUND: ./images/linux_matrix.png
 :END:
 
 ↑Title for Windows users↑
@@ -100,20 +101,80 @@ First time in 2006 ([[https://xakep.ru/2007/02/26/36939/][Windows Vista vs Mandr
 - many others
 #+REVEAL_HTML: </div>
 
+#+BEGIN_NOTES
+Вот далеко не целый список ОС, которые я пробовал или использовал.
+
+Среди интересных (о которых *не будет рассказано* далее):
+- MeeGo — Moblin (Intel) + Maemo (Nokia) = Nokia N900
+- BolgenOS — всеми известная ОС Дениса Попова, которую нельзя не попробовать.
+- ChromiumOS — изучал исходный код, написан великолепно, а главное — есть Rust.
+- AstraLinux — очень много работал в своё время, даже писал модули ядра для мандатной системы.
+- Backtrack — WHAX + Auditor Security Collection; все ли помнят, откуда пришла KaliLinux?
+- SteamOS — ставил основной системой для игр, когда был глупым, толку никакого.
+#+END_NOTES
+
 #+REVEAL: split
+
 Arch Linux since 2013
 
 #+ATTR_HTML: :width 70%
 [[./images/archlinux_logo.png]]
 
+#+BEGIN_NOTES
+Примерно на *первом-втором курсе* я купил ноутбук и установил туда ArchLinux, с тех пор *ни разу не
+переустанавливал*, только обновлял пакеты и настройки.
+#+END_NOTES
+
 #+REVEAL: split
+
 Open source community member (maintainer, developer)
+
+#+ATTR_HTML: :width 70%
+[[./images/oss.jpg]]
+
+#+BEGIN_NOTES
+Являюсь maintainer некоторых пакетов в ArchLinux, ну и разработчиком соответственно. Пытаюсь по мере
+возможности принимать участие *в обсуждении направления развития* ОС или утилиты, которые мне
+интересны.
+
+Стараюсь писать небольшие заметки и статьи для общего пользования, но качества они не очень
+хорошего, поэтому в массы их не выкладываю.
+
+Для *всего контента (статьи, доклады, настольные игры)*, что я произвожу стараюсь выкладывать
+исходные тексты.
+#+END_NOTES
 
 ** Disclaimer
 
-I'm evangelist of my software
+I'm the software evangelist I use
 
-Something can always go wrong...
+#+BEGIN_NOTES
+Моя любимая рубрика.
+
+К тому, про что я буду рассказывать, буду относиться *предвзято*.
+#+END_NOTES
+
+#+REVEAL_HTML: <div class="container" style="display:flex; align-items:center">
+#+REVEAL_HTML: <div class="column" style="float:left; width: 20%">
+[[./images/rust_logo.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 20%">
+[[./images/spacemacs_logo.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 20%">
+[[./images/ghidra_logo.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 20%">
+[[./images/archlinux_logo_mini.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 20%">
+[[./images/gitlab_logo.png]]
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
 
 * Principles
 ** KISS
