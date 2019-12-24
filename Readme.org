@@ -8,7 +8,8 @@
 #+REVEAL_HLEVEL: 2
 #+REVEAL_TRANS: linear
 #+REVEAL_TITLE_SLIDE:<h1>%t</h1><p>%a</p><p><a href="https://t.me/dura_lex">@dura_lex</a></p>
-#+REVEAL_THEME: black
+#+REVEAL_THEME: night
+#+REVEAL_EXTRA_CSS: override.css
 
 #+TITLE: How to survive^Wlive with Linux
 #+AUTHOR: Abc Xyz
