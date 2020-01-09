@@ -627,6 +627,12 @@ Check unneeded packages and install new or delete unneeded.
 
 You can encrypt files, part of elements, use different configurations for different machines.
 
+*** Dark and bright
+
+Pain in the eyes or headache.
+
+Auto switching temperature of color, but can't automate the detecting of the light switch off.
+
 ** VIM/Emacs everywhere
 
 Don't use mouse, because it need more time, than keyboard. Home row of your keyboard is your friend: speedup, less fever.
