@@ -200,7 +200,7 @@ keep it simple stupid
 
 Text-based user interface
 
-#+ATTR_ORG: :width 900
+#+ATTR_HTML: :width 900
 [[./images/Fdedit.png]]
 
 #+BEGIN_NOTES
@@ -214,7 +214,7 @@ Text-based user interface
 
 Command-line interface
 
-#+ATTR_ORGR: :width 90%
+#+ATTR_HTML: :width 90%
 [[./images/cli.png]]
 
 #+BEGIN_NOTES
