@@ -5,7 +5,7 @@
 #+OPTIONS: reveal_slide_number:c/t
 #+OPTIONS: reveal_history:t
 #+OPTIONS: toc:nil
-#+REVEAL_HLEVEL: 2
+#+REVEAL_HLEVEL: 3
 #+REVEAL_TRANS: linear
 #+REVEAL_TITLE_SLIDE:<h1>%t</h1><p>%a</p><p><a href="https://t.me/dura_lex">@dura_lex</a></p>
 #+REVEAL_THEME: night
