@@ -368,7 +368,9 @@ Console mode
 
 *** youtube-dl
 
-#+ATTR_HTML: :width 80%
+=youtube-dl= usage
+
+#+ATTR_HTML: :width 70%
 [[./images/yt_dl.png]]
 
 #+BEGIN_NOTES
@@ -377,8 +379,11 @@ Console mode
 
 #+REVEAL: split
 
-#+ATTR_HTML: :width 80%
+Extractors list
+
+#+ATTR_HTML: :width 70%
 [[./images/yt_dl_list.png]]
+
 
 #+REVEAL: split
 
@@ -394,11 +399,23 @@ Restrictions, advertising? What are you talking about?
 
 *** curl — httpie
 
-Nice format, simple using
+- simple using
+- nice format output
+- JSON parsing (=curl= + =jq=)
+- etc
+
+#+REVEAL: split
+
+Example of default output
+
+#+ATTR_HTML: :width 80%
+[[./images/httpie.png]]
 
 *** wget — aria2
 
-More fast, can download torrents, more protocols
+- Faster (segmented downloading)
+- BitTorrent extensions (DHT, PEX, Multi-Tracker, UDP tracker, local peer discovery, etc)
+- More protocols (FTP, Metalink, etc)
 
 *** Cloud storages
 
