@@ -284,36 +284,113 @@ GuixSD:
 
 * Software
 
-Only my experience, but exist very very much others utilities
+Mostly CLI and TUI
+
+#+BEGIN_NOTES
+Только тот софт, которым пользуюсь я.
+#+END_NOTES
 
 ** Internet
 *** Network managers
 
-- NetworkManager (nmcli, nmtui)
+- NetworkManager (=nmcli=, =nmtui=)
 - systemd-networkd
+
+#+BEGIN_NOTES
+- Из коробки есть поддержка практически любых сетевых соединений, что-то доставляется плагинами.
+- Минималистичная настройка, использую там, где требуется *настроить один раз и забыть*.
+#+END_NOTES
 
 *** Tor and I2P
 
-torify, SOCKS
+#+ATTR_REVEAL: :frag (appear)
+- SOCKS
+  - =tsocks=, =proxychains-ng=
+  - =libproxy=
+  - environment variables
+- HTTP
+  - =httptunnel=
+  - =proxytunnel=
+  - =corkscrew=
+- torify (applications w/o proxy settings)
+
+#+REVEAL: split
+
+- i2p
+  - mail
+  - messenger
+  - IRC
+  - iMule
+  - etc
+
+#+ATTR_REVEAL: :frag appear
+/Средство, позволяющее ежедневно водить копирастам, спецслужбам и прочим пидорам хуём по губам/ (c) Луркоморье
 
 *** Web browsers
-**** CLI, TUI
 
 - w3m
 - elinks
 
-**** Firefox
+Useful for fast browsing, scraping from console, previewing in file managers and many other cases
 
-Others unstable and have less features (based on webkit, didn't have Rust): luakit, surf, qutebrowser
+#+REVEAL: split
 
-Pendactyl for LSR
-Tridactyl after updates
-VimiumC
+Firefox
 
-*** yotube-dl
+Other VIM-based browsers are unstable and have less features (based on WebKit, didn't have Rust Quantum engine):
 
-mpv + tridactyl
-In i3 scratchpad
+- luakit
+- surf
+- qutebrowser
+
+#+REVEAL: split
+
+VIM plugins:
+
+- Pendactyl (only Extended Support Release)
+- Tridactyl
+- Vimium
+- Vimium C (current)
+
+#+REVEAL: split
+
+Hint mode
+
+#+ATTR_HTML: :width 90%
+[[./images/vimium_c.png]]
+
+#+REVEAL: split
+
+Console mode
+
+#+ATTR_HTML: :width 90%
+[[./images/tridactyl.png]]
+
+*** youtube-dl
+
+#+ATTR_HTML: :width 80%
+[[./images/yt_dl.png]]
+
+#+BEGIN_NOTES
+1000 и 1 способ скачать/получить ссылку видео, аудио и т. п.
+#+END_NOTES
+
+#+REVEAL: split
+
+#+ATTR_HTML: :width 80%
+[[./images/yt_dl_list.png]]
+
+#+REVEAL: split
+
+tridactyl / etc + youtube-dl + mpv / mpd
+
+=
+
+video/audio ninja (you is godlike with i3)
+
+#+REVEAL: split
+
+Restrictions, advertising? What are you talking about?
 
 *** curl — httpie
 
