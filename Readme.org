@@ -11,7 +11,7 @@
 #+REVEAL_THEME: night
 #+REVEAL_EXTRA_CSS: override.css
 
-#+TITLE: How to survive^Wlive with Linux
+#+TITLE: How to survive^W live with Linux
 #+AUTHOR: Abc Xyz
 #+EMAIL: @dura_lex
 
@@ -203,23 +203,67 @@ Text-based user interface
 #+ATTR_ORG: :width 900
 [[./images/Fdedit.png]]
 
+#+BEGIN_NOTES
+Текстовый интерфейс может быть достаточно разным, но скорее всего вы привыкли его видеть таким,
+каким он представлен на рисунке (Windows).
+
+Это и есть соблюдение принципов KISS.
+#+END_NOTES
+
 ** CLI
 
-Console-based user interface
+Command-line interface
 
-Easy for using and porting (for example, mobile phone)
+#+ATTR_ORGR: :width 90%
+[[./images/cli.png]]
+
+#+BEGIN_NOTES
+- легко использовать
+- легко переносить
+- легко разрабатывать
+- чистый KISS
+#+END_NOTES
 
 * OS
+
+*It's my opinion, for my workflow
+
 ** ArchLinux
+
+#+ATTR_REVEAL: :frag (appear)
+- KISS (no bloatware and unnecessary services)
+- Stability & Reliability (rolling release)
+- Arch Wiki
+- =pacman=
+- Arch User Repository
+- Perfect learning base
+- Arch Linux Community (no companies, no corporate ties)
+- Flexibility & Customization
+
+#+BEGIN_NOTES
+- *Нет ничего лишнего*, только то, что вы сами установили и настроили.
+- Да, не удивляйтесь. Пакеты можно *обновлять только все разом*, соответственно в любой промежуток
+  времени тестирование проходит именно на последних версиях пакетов. Баги возникают только *из-за
+  конфликтов файлов конфигураций*.
+- Возникли проблемы на любом Linux — читай Arch Wiki.
+- Пожалуй, лучший пакетный менеджер, к тому же самый быстрый.
+- Любой пакет из git репозитория. Есть *всё, что душе угодно*.
+- Хотите познать Linux, ставьте ArchLinux.
+- Яркий пример продукта, который делается сообществом (как с положительной, так и отрицательной
+  точки зрения).
+- Один из самых разумно-гибких дистрибутивов.
+#+END_NOTES
+
 ** Why not others?
+
 *** Ubuntu, Fedora, Mint, Manjaro, etc
 
-Because it is very fat OSs:
+Because these are very fat OSs:
 - a lot of unused software
 - many configuration files
 - a lot of strange behavior
 
-But for something it's useful
+But for some reason these distributions are very useful
 
 *** Gentoo, LFS
 
@@ -227,9 +271,16 @@ Fuss too much with them
 
 *** NixOS, GuixSD
 
-DSL, some issues, FHS
+NixOS:
 
-Very unstable, libre OS
+- DSL
+- some +my+ issues
+- FHS (Filesystem Hierarchy Standard)
+
+GuixSD:
+
+- very unstable
+- libre OS
 
 * Software
 
