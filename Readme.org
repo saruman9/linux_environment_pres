@@ -7,7 +7,7 @@
 #+OPTIONS: toc:nil
 #+REVEAL_HLEVEL: 3
 #+REVEAL_TRANS: linear
-#+REVEAL_TITLE_SLIDE:<h1>%t</h1><p>%a</p><p><a href="https://t.me/dura_lex">@dura_lex</a></p>
+#+REVEAL_TITLE_SLIDE:<h2>%t</h2><p>%a</p><p><a href="https://t.me/dura_lex">@dura_lex</a></p>
 #+REVEAL_THEME: night
 #+REVEAL_EXTRA_CSS: override.css
 
@@ -295,10 +295,12 @@ Mostly CLI and TUI
 
 - NetworkManager (=nmcli=, =nmtui=)
 - systemd-networkd
+- iwd
 
 #+BEGIN_NOTES
 - Из коробки есть поддержка практически любых сетевых соединений, что-то доставляется плагинами.
 - Минималистичная настройка, использую там, где требуется *настроить один раз и забыть*.
+- Всё, что требуется для сетевого соединения. Без каких-либо зависимостей от Intel.
 #+END_NOTES
 
 *** Tor and I2P
@@ -417,59 +419,151 @@ Example of default output
 - BitTorrent extensions (DHT, PEX, Multi-Tracker, UDP tracker, local peer discovery, etc)
 - More protocols (FTP, Metalink, etc)
 
-*** Cloud storages
+# *** Cloud storages
 
-WebDAV
-gvfs with encryption
+# WebDAV
+# gvfs with encryption
 
 *** Torrents
-**** Transmission
+*Transmission*
 
-Server
-Mobile client
-CLI client for scripts + TUI client - tremc
+- Client-server architecture
+- Mobile client
+- CLI client for scripts + TUI client — =tremc=
 
-**** peerflix
+#+ATTR_HTML: :width 70%
+[[./images/tremc_0.png]]
 
-Needed replace developed in Rust
+#+REVEAL: split
 
-Auto sync with transmission for speedup
+#+ATTR_HTML: :width 80%
+[[./images/tremc_1.png]]
 
-*** Mail
-**** neomutt
+#+REVEAL: split
 
-notmuch
+*+peerflix+* *WebTorrent*
 
-offlineimap
+- Streaming torrent client
+- Modules
+- Media futures
+- node.js & browser +needed Rust/wasm version+
 
-GPG
+*** Mail — (neo)mutt + OfflineIMAP + getmail + msmtp + etc
+
+- Customization
+  - Key bindings
+  - Custom mail headers
+  - Favorite editors
+  - View, colors, sidebars
+- Modules
+  - Address books
+  - IMAP, POP3, SMTP clients
+  - Password managers
+  - Everywhere in sh/bash
+
+#+REVEAL: split
+
+- GPG
+- CLI
+- No JS, HTML
+
+#+REVEAL: split
+
+#+ATTR_HTML: :width 80%
+[[./images/neomutt.png]]
 
 *** Messengers
 
-BitlBee — gateway
-WeeChat — IRC
-MCabber, profanity — XMPP
-toxic — tox
-tg-cli — telegram, but telegram desktop also
-Try to forward all to XMPP, but it was very hard
+*BitlBee* - IRC gateway
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+  - XMPP
+  - Hipchat
+  - Hangouts
+  - Twitter
+  - Skype
+  - Telegram
+  - Facebook
+  - VK
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+  - Matrix
+  - Discord
+  - Steam
+  - Mastodon
+  - Slack
+  - ICQ
+  - etc
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+
+#+ATTR_HTML: :width 80%
+[[./images/bitlbee.png]]
+
+#+REVEAL: split
+
+*WeeChat* - IRC
+
+#+ATTR_HTML: :width 80%
+[[./images/weechat.gif]]
+
+#+REVEAL: split
+
+*MCabber*, *profanity* — XMPP
+
+- PGP
+- OTR
+- Plugins/Modules
+- Multi-User chat
+- Command completion
+
+#+REVEAL: split
+
+#+ATTR_HTML: :width 80%
+[[./images/profanity.png]]
+
+#+REVEAL: split
+
+*toxic* — Tox
+
+- P2P
+- For secure conversation
+
+#+REVEAL: split
+
+*tg-cli* — Telegram, but telegram-desktop too
 
 *** RSS, news
 
-newsboat
+*newsboat*
 
-Aggregate from all
+As mutt, but for RSS
 
-Later create channels with bot, which send RSS to channel
-Also use Twitter to RSS
+#+REVEAL: split
 
-Now I don't read news, very much time, which I can spend for developing
+*Telegram*
+
+Channels with bots, which sends RSS (Reddit, Twitter, HackerNews, Lobste.rs,
+etc) to channels
+
+#+BEGIN_NOTES
+Now I don't read news, very much time, which I can spend for
+developing/writing/etc.
+#+END_NOTES
 
 *** Remote desktop
 
-For easy task use ssh with X forwarding, use settings for compress and encrypting traffic for speedup
-For hard task use VNC
+- Easy tasks
 
-Also I use qemu with SPICE and connect through VNC
+  ssh with X forwarding (use settings for compressing and encrypting traffic for
+  speedup)
+
+- Hard tasks
+
+  - VNC
+  - qemu with SPICE + VNC
 
 ** Multimedia
 *** Image viewers
