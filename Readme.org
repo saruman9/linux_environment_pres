@@ -567,60 +567,74 @@ developing/writing/etc.
 
 ** Multimedia
 *** Image viewers
-**** Framebuffer
+*Framebuffer* (energy saving)
 
-- fbi
-- fbv
+- =fbi=
+- =fbv=
 
-**** Simple
+#+ATTR_REVEAL: :frag (appear)
+Don't forget configure tty!
+
+#+REVEAL: split
+
+*Simple*
 
 - feh
-- vimiv
-- sxiv
+  - CLI and hotkey powerful
+  - Very simple (so no screenshots)
+
+#+REVEAL: split
+
+- sxiv (more GUIably, than feh)
+- vimiv (VIM image viewer)
 
 *** ImageMagick
 
-Very powerful image processing tool
+Very powerful image processing tool!
+
+Throw out your GIMP. A joke of course. Throw out your Photoshop.
 
 *** Music
 
-I don't like music streaming services, because too much choices. I have player, which firmware is open source, I create tools for syncing playlists. I create mini iTunes.
+*mpd*
 
-**** mpd
+- Server with clients:
+  - mobile
+  - GUI
+  - TUI
+  - CLI
+- mpdscribble
 
-Server with clients:
-- mobile
-- GUI
-- TUI
-- CLI
+#+BEGIN_NOTES
+I don't like music streaming services, because too much choices. I have player,
+which firmware is open source, I create tools for syncing playlists. I create
+mini iTunes.
+#+END_NOTES
 
-**** mpdscribble
-**** pianobar
+#+REVEAL: split
 
-Online radio
+#+ATTR_HTML: :width 100%
+[[./images/ncmpcpp.png]]
 
 *** Video
-**** Players
+*Players*
 
-mpv most powerful video/audio player
-cvlc CLI version of VLC
+- mpv — most powerful video/audio player
+- cvlc — CLI version of VLC
 
-**** FFmpeg
+#+REVEAL: split
 
-Converting, hardware rendering, screencasting, input/output many formats (camera, screens, devices)
+*FFmpeg*
+
+Converting, hardware rendering, screencasting, input/output many formats
+(camera, screens, devices)
 
 *** Metadata
 
-ExifTool
-exiv2
-
 Many interesting things you can know from metadata of video, images and data
 
-*** File transfer
-
-Android file transfer, MTP
-OpenDrop, AirDrop
-WiFi server
+- ExifTool (audio, video, images, documents, etc)
+- exiv2 (images)
 
 ** Utilities
 *** Terminal emulators
