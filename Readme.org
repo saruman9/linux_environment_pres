@@ -639,41 +639,97 @@ Many interesting things you can know from metadata of video, images and data
 ** Utilities
 *** Terminal emulators
 
-urxvt with many patches and plugins developed in Perl, old
-Alacritty GPU rendering, Rust, many features, but simple
-Kitty Python, many features, slow with tmux, GPU, Unicode, many nice bindings
+*urxvt (rxvt-unicode)*
+- Old
+- Universal
+- Many patches and plugins developed in Perl
+- Configurations in Xresources
 
-*** Multiplexers. tmux
+#+REVEAL: split
 
-byobu
+*Alacritty*
+- GPU rendering
+- Rust
+- Many features
+
+#+REVEAL: split
+
+*Kitty*
+- GPU rendering
+- Python
+- More features (Unicode glyphs, many nice bindings, graphics etc)
+
+*** Terminal multiplexer. tmux
+
+Also =byobu= as more friendly and =screen= as older
+
+#+ATTR_HTML: :width 90%
+[[./images/tmux.png]]
+
+#+BEGIN_NOTES
+- Enables multiple windows and panes within a single terminal window
+- Keeps windows and panes in a session
+- Enables session sharing (great for pair programming)
+#+END_NOTES
 
 *** File managers
-**** ranger
 
-Python, features, slow
+*ranger*
 
-**** vifm
+- Many features
+- Python
+- Slow
 
-C, VIM, features
-Batch renaming
-Diffing
-Filtering
-Searching
+#+REVEAL: split
 
-*** Synchronization
+[[./images/ranger.png]]
 
-Syncthing
-Unison
+#+REVEAL: split
 
-*** restic for backups
+*vifm*
 
-Snapshots, encrypted, many protocols + systemd
+- C
+- VIM
+- Diffing
+- Filtering
+- Searching
+- Batch renaming
+
+#+REVEAL: split
+
+[[./images/vifm.png]]
 
 *** Git
 
-You should learn it.
-Gitea, GitLab
-Use everywhere
+You should learn it!
+
+I use it everywhere:
+- control version
+- backups
+- diffing
+- merging
+- review
+- messaging
+- file system
+- etc
+
+#+REVEAL: split
+
+*Gitea*, *GitLab*, *GitWeb* as self-hosted Git-repository managers
+
+#+ATTR_HTML: :width 75%
+[[./images/git-instaweb.png]]
+
+*** Backups
+
+*restic*
+
+Encrypted snapshots, many backends + systemd
+
+# *** Synchronization
+
+# Syncthing
+# Unison
 
 ** Text editing
 
