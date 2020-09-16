@@ -733,44 +733,227 @@ Encrypted snapshots, many backends + systemd
 
 ** Text editing
 
-Don't use doc{,x} ppt, xls and others
+Use doc{,x}, ppt{,x}, xls{,x} and others if you really needed it.
 
 *** VIM
+
+#+ATTR_HTML: :width 50%
+[[./images/vim_quit.jpeg]]
+
+#+REVEAL: split
+
+- Modern text editor (tabs, windows, buffers, syntax highlighting, spell
+  checking, folding, etc)
+- Modal editor (insert and normal modes + visual and line modes)
+- Comprehensive help system
+- Memory footprint is very low, faster than other
+- Command centric. You can perform complex text related task with few commands
+- Many plug-in available
+- Native scripting (vimscript) and built-ins commands
+- vimdiff, rview, rvim
+- Ubiquitous
+
+#+REVEAL: split
+
+#+ATTR_HTML: :width 60%
+[[./images/vim_evangelism.png]]
+
+#+BEGIN_NOTES
+Use VIM everywhere!
+#+END_NOTES
+
 *** Emacs
 
+#+ATTR_HTML: :width 70%
+[[./images/vim_vs_emacs.png]]
+
+#+REVEAL: split
+
+- Client-server (share the buffer list, kill ring, undo and other)
+- Pervasive help system with keybindings, functions and commands documented on
+  the fly
+- CLI, TUI, GUI
+- Extensible and customizable Lisp programming language variant (Emacs Lisp)!..
+
+#+REVEAL: split
+
+- Ability to emulate vi and vim (using Evil, Viper or Vimpulse)
+- A powerful and extensible file manager (dired), integrated debugger, and a
+  large set of development and other tools
+- Having every command be an Emacs Lisp function enables commands to DWIM (Do
+  What I Mean). For example, a =switch-or-split-window=
+- "An OS inside an OS"
+
+#+ATTR_REVEAL: :frag (appear)
 Rust ♥️ Emacs = remacs
 
-*** Spacemacs
+*** Spacemacs & Doom
+
+My choice:
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+#+ATTR_HTML: :width 50%
+[[./images/spacemacs_logo.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+[[./images/doom_logo.png]]
+#+REVEAL_HTML: </div>
+
+*** Org-mode
+
+Your Life in Plain Text
+
+- Keeping notes
+- Maintaining TODO lists
+- Planning projects
+- Authoring documents (à la Jupyter notebook, tablesheet, exporting to another
+  formats)
+
+#+ATTR_REVEAL: :frag (appear)
+This presentation created in org-mode and exported to HTML + reveal.js
+
+#+BEGIN_NOTES
+Использую для всего на свете: отчёты, заметки, презентации, планирование,
+научные работы.
+#+END_NOTES
+
+#+REVEAL: split
+
+[[./images/org_mode_0.jpg]]
+
+#+REVEAL: split
+
+[[./images/org_mode_1.jpg]]
+
+#+REVEAL: split
+
+[[./images/org_mode_2.jpg]]
+
+#+REVEAL: split
+
+[[./images/org_mode_3.jpg]]
+
+#+REVEAL: split
+
+[[./images/org_mode_4.jpg]]
+
+#+REVEAL: split
+
+[[./images/org_mode_5.jpg]]
+
+#+REVEAL: split
+
+[[./images/org_mode_6.jpg]]
+
 *** LaTeX
-*** Org mode
 
-This presentation created in org mode
+#+BEGIN_SRC latex
+\mode<presentation>
+{
+  \usetheme{dsec}
+  \dsecset{progressbar = frametitle}
+  \dsecset{subsectionpage = progressbar}
+}
+\title{Introduction to software-based
+ microarchitectural side-channel attacks}
+\subtitle{}
 
-*** AsciiDoc
+\author{Abc Xyz\\
+@dura\_lex}
+\titlegraphic{\includegraphics[height = 0.9cm]{logo.pdf}}
 
-Many features
+\date{}
+\subject{Information security}
+#+END_SRC
+
+#+REVEAL: split
+
+[[./images/latex_pdf.png]]
+
+#+REVEAL: split
+
+- Typesetting journal articles, technical reports, books, and slide
+  presentations
+- Control over large documents containing sectioning, cross-references, tables
+  and figures
+- Typesetting of complex mathematical formulas
+- Advanced typesetting of mathematics with AMS-LaTeX
+- Automatic generation of bibliographies and indexes
+- Multi-lingual typesetting
+- Inclusion of artwork, and process or spot colour
+
+#+BEGIN_NOTES
+Использую для больших докладов, научных работ.
+#+END_NOTES
+
+*** Zathura
+
+Simple PDF reader
+
+- VIM bindings
+- Automatic reloading document
+- Synctex
+- Recoloring, reformatting
+- CLI
 
 *** Markdown
 
-For work
+Use for work
+
+*** AsciiDoc
+
+Use for _*real*_ work
+
+- Including files
+- [[https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#lists][Normal lists with complex content]]
+- [[https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#links][Anchors]]
+- [[https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#images][Formatted images]]
+- [[https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#source-code][Powerful code blocks]]
+- Comments
+- [[https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#tables][Tables for the people]]
+- ToC
+- [[https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#bibliography][Bibliography]]
+- etc
 
 *** Pandoc
-*** Zathura
 
-For all + evince
+Markup converter
 
-*** OCR
-
-Tesseract
-
-*** Dictionary and translation
-
-Scripts and GoldenDict
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+- Markdown
+- reStructuredText
+- AsciiDoc
+- Org-Mode
+- Textile
+- HTML
+- CSV
+- EPUB
+- roff
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+- LaTeX
+- DocBook
+- OPML
+- InDesign
+- Wiki
+- reveal.js
+- Microsoft Word
+- OpenOffice/LibreOffice
+- etc
+#+REVEAL_HTML: </div>
 
 *** Spell checkers
 
-Everywhere
-Aspell, hunspell + LanguageTool for grammars
+Aspell, Hunspell + LanguageTool for grammars
+
+Use my personal dict everywhere (editors, browser, shell, edit fields)
+
+*** Tesseract OCR
+
+- CLI
+- API
+- Multilanguages
 
 ** Core utilities
 
