@@ -984,41 +984,156 @@ Use my personal dict everywhere (editors, browser, shell, edit fields)
 
 ** Core utilities
 
-Utilities stable but old and have few features
-
-Not replace, but alternatives
-
-For scripts you should use first order applications for compatability
-
-It's normal, that more than half applications were developed in Rust language
+#+ATTR_REVEAL: :frag (appear)
+- Standard utilities are old and have few features, but stable
+- The list below is alternatives, not replace
+- For scripts you should use first order applications for compatibility
+- It's normal, that more than half applications were developed in Rust language
 
 *** Bash — Zsh
-*** ls — lsd
-*** tree — exa
-*** cat + less, more — bat
+
+- Featured aliases (suffix and global)
+- Easy directory navigation
+- Advanced completion
+- Globbing
+- Command line editing
+- Spelling correction
+- Themes and plugins (Oh My Zsh, Prezto, Powerlevel9k, etc)
+- etc
+
+#+REVEAL: split
+
+Zsh features
+
+[[./images/zsh.gif]]
+
+*** ls — lsd (r)
+
+Colorized and with icons =ls=
+
+[[./images/lsd.png]]
+
+*** tree (ls) — exa (r)
+
+More features and faster
+
+#+REVEAL: split data-background="./images/exa.png"
+
+*** cat + less, more — bat (r)
+
+- Automatic paging
+- Customization
+- More features...
+
+#+REVEAL: split
+
+Syntax highlighting
+
+[[./images/bat_syntax.png]]
+
+#+REVEAL: split
+
+Git integration
+
+[[./images/bat_git.png]]
+
+#+REVEAL: split
+
+Show non-printable characters
+
+[[./images/bat_print.png]]
+
 *** cp, mv, rm — rsync
 
-=-i= for prompting the user before the action
+- Fast and extraordinarily versatile file copying
+- Progress bar
+- Delta-transfer
+- Client-server architecture
+- Can replace =scp=
+- Can used as backup tool
 
-Also backups
+*** du, df — ncdu
 
-*** du — ncdu
+Interactive =du= and =df=
 
-sn — developed in Rust, multithreads, speedup
+#+REVEAL: split
+
+ncdu
+
+[[./images/ncdu.png]]
 
 *** tar, (un)zip — bsdtar, 7z
-*** find — fd
-*** diff — git-diff, colordiff
 
-More powerful, more future
+tar + (un)zip = bsdtar
 
-colordiff, diffoscope
+- Automatic format detection
+- Handles file flags, ACLs, arbitrary pathnames, etc
+- Library. =libarchive=
 
-**** vimdiff (VIM), ediff (Emacs)
+*** find — fd (r)
 
-Powerful interactive tools
+- Convenient syntax: =fd PATTERN= instead of =find -iname '*PATTERN*'=
+- Colorized terminal output (similar to ls)
+- It's fast
+- Smart case
+- Ignores hidden directories and files, =.gitignore= by default
+- Fast regular expressions
+- Unicode-awareness
+- The command name is 50% shorter* than find
+- Parallel command execution with a syntax similar to GNU Parallel
 
-3-way diff
+#+REVEAL: split
+
+[[./images/fd.svg]]
+
+*** diff — git-diff, colordiff, delta (r)
+
+Use +git-diff+ +colordiff+ =delta= for diffing!
+
+
+- Language syntax highlighting with color themes
+- Within-line highlights based on a Levenshtein edit inference algorithm
+- Git style strings (foreground color, background color, font attributes) are
+  supported for >20 stylable elements
+- Side-by-side view
+- Line numbering
+
+#+REVEAL: split
+
+- =diff-highlight= and =diff-so-fancy= emulation modes
+- Stylable box/line decorations to draw attention to commit, file and hunk
+  header sections.
+- =n= and =N= keybindings to move between files in large diffs, and between
+  diffs in =log -p= views (=--navigate=)
+
+#+REVEAL: split
+
+=delta= with line numbers
+
+#+ATTR_HTML: :width 70%
+[[./images/delta_0.png]]
+
+#+REVEAL: split
+
+=delta= with =side-by-side=
+
+[[./images/delta_1.png]]
+
+#+REVEAL: split
+
+*vimdiff* (VIM), *ediff* (Emacs)
+
+Powerful interactive diffing tools
+
+3-way diff for merging
+
+*** diffoscope
+
+In-depth comparison of files, archives, and directories
+
+- Compare many file formats (binary, archive)
+- Fallback on hexdump comparison
+- Fuzzy-matching to handle renamings
 
 *** grep — ripgrep
 
