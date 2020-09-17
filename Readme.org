@@ -436,7 +436,8 @@ Example of default output
 
 #+REVEAL: split
 
-#+ATTR_HTML: :width 80%
+Torrent info
+
 [[./images/tremc_1.png]]
 
 #+REVEAL: split
@@ -467,10 +468,7 @@ Example of default output
 - CLI
 - No JS, HTML
 
-#+REVEAL: split
-
-#+ATTR_HTML: :width 80%
-[[./images/neomutt.png]]
+#+REVEAL: split data-background="./images/neomutt.png"
 
 *** Messengers
 
@@ -499,6 +497,8 @@ Example of default output
 
 #+REVEAL: split
 
+BitlBee interface
+
 #+ATTR_HTML: :width 80%
 [[./images/bitlbee.png]]
 
@@ -506,7 +506,6 @@ Example of default output
 
 *WeeChat* - IRC
 
-#+ATTR_HTML: :width 80%
 [[./images/weechat.gif]]
 
 #+REVEAL: split
@@ -521,7 +520,8 @@ Example of default output
 
 #+REVEAL: split
 
-#+ATTR_HTML: :width 80%
+profanity Pip-Boy
+
 [[./images/profanity.png]]
 
 #+REVEAL: split
@@ -613,6 +613,8 @@ mini iTunes.
 
 #+REVEAL: split
 
+ncmpcpp
+
 #+ATTR_HTML: :width 100%
 [[./images/ncmpcpp.png]]
 
@@ -682,6 +684,8 @@ Also =byobu= as more friendly and =screen= as older
 
 #+REVEAL: split
 
+ranger interface
+
 [[./images/ranger.png]]
 
 #+REVEAL: split
@@ -696,6 +700,8 @@ Also =byobu= as more friendly and =screen= as older
 - Batch renaming
 
 #+REVEAL: split
+
+vifm interface
 
 [[./images/vifm.png]]
 
@@ -820,30 +826,51 @@ This presentation created in org-mode and exported to HTML + reveal.js
 
 #+REVEAL: split
 
+Planning
+
+#+ATTR_HTML: :width 80%
 [[./images/org_mode_0.jpg]]
 
 #+REVEAL: split
 
+Clocking
+
+#+ATTR_HTML: :width 80%
 [[./images/org_mode_1.jpg]]
 
 #+REVEAL: split
 
+Agendas
+
+#+ATTR_HTML: :width 80%
 [[./images/org_mode_2.jpg]]
 
 #+REVEAL: split
 
+Capturing
+
+#+ATTR_HTML: :width 80%
 [[./images/org_mode_3.jpg]]
 
 #+REVEAL: split
 
+Tables
+
+#+ATTR_HTML: :width 80%
 [[./images/org_mode_4.jpg]]
 
 #+REVEAL: split
 
+Exporting
+
+#+ATTR_HTML: :width 80%
 [[./images/org_mode_5.jpg]]
 
 #+REVEAL: split
 
+Working with source code
+
+#+ATTR_HTML: :width 80%
 [[./images/org_mode_6.jpg]]
 
 *** LaTeX
