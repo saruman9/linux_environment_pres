@@ -1137,109 +1137,90 @@ In-depth comparison of files, archives, and directories
 
 *** grep — ripgrep
 
-- faster
-- multiline grep
-- powerful regexp on Rust
-- modern
-- rgall replace find + grep
+- Fastest (Rust's regex engine + paralleling)
+- Unicode support by default
+- Powerful regexp on Rust (but PCRE2 exist)
+- Support searching files compressed (bzip2, gzip, lzma, xz, etc)
+- Multiline searching
+- Arbitrary input preprocessing filters
 
 *** sed, {g,n,m}awk
 
-You should use it more often
-
-*** dmesg — journalctl
-
-- filters
-- all info from syslog, dmesg, other logging systems
+If you are not using it yet, then it's time
 
 *** (u)mount — udisks2
 
 Mounting with user's permissions
 
-Manipulating by systemd
+*** pass
 
-*** Shell built-ins
+CLI pass manager. Powered by OpenPGP
 
-- alias
-- type
-- time
+*** systemd
 
-Other functions
+Not Unix way, but very useful
 
-*** Simple and useful tools for RE and etc
-**** tee
-**** mktemp
-**** tr
-**** cut
-**** od, xxd, hexdump
-**** sort, uniq, comm
-**** head, tail
-**** wc
-**** strings
-**** iconv
-**** file
+- Journal: system logging
+- Timers: reasonable alternative to cron
+- systemd-boot: UEFI boot manager
+- systemd-logind: session manager
+- systemd-networkd: network configuration management
+
+#+REVEAL: split
+
+- systemd-nspawn: light-weight namespace container
+- systemd-resolved: network name resolution
+- systemd-timesyncd: system time synchronization across the network
+- systemd-tmpfiles: temporary files
+- etc
+
+*** Simple and useful tools for RE and life
+
+- =tee=: read from standard input and write to standard output and files
+- =mktemp=: create a temporary file or directory
+- =tr=: translate or delete characters
+- =cut=: remove sections from each line of files
+- =od=, =xxd=, =hexdump=: custom hex view
+- =sort=, =uniq=, =comm=: sort, delete duplicates, compare output
+
+#+REVEAL: split
+
+- =head=, =tail=
+- =wc=: count of chars, lines, bytes
+- =strings=
+- =iconv=: convert text from one character encoding to another
+- =file=: what is it?
+- =watch=: execute a program periodically, showing output
+
+#+REVEAL: split
+
+- =inotifywait=: wait for changes to files using inotify
+- =ls{blk,pci,cpu,usb}=: block, PCI, CPU, USB devices
+- =sudo=, but not =su= (=sudoedit= for editing files): I'm root
+- =pgrep=, =pidof=: find process
+- =kill=, =pkill=, =killall=: then kill it
+- =ps=, =htop=: process list
+
 *** Rust section
 
-Install rustup
+Install =rustup=: https://rustup.rs
 
-cargo install and you on the horse
+#+BEGIN_SRC shell
+$ cargo install package_name
+#+END_SRC
 
-**** tokei
+and you on the horse!
 
-Rust
+#+REVEAL: split
 
-Inspect source code
-
-**** jq
-
-JSON prettifier
-
-**** xsv
-
-Rust
-
-Very fast parsing of large CSV files
-
-miller have more features
-
-**** fselect
-
-Rust
-
-Finding on file system with SQL queries. Find + ls + awk
-
-**** bingrep
-
-Color readelf, more powerful grep for elf files
-
-**** ripgrepall
-
-Find everywhere: binary files, PDFs, images, music, video, etc
-
-**** stringsext
-
-Better searching Unicode strings, but performance may be better
-
-**** tealdeer
-
-tldr, documentation
-
-*** Other useful core utilities
-
-- ls{blk,pci,cpu,usb}
-- sudo, but not su (sudoedit for editing files)
-- kill, pkill, killall
-- pgrep, pidof
-- ps, free, top, htop
-
-*** Systemd
-
-vs SYSinitV
-
-** Security
-*** Password manager
-
-pass
+- =tokei=: inspect source code
+- =jq=: JSON prettifier
+- =xsv=: very fast parsing of large CSV files
+- =fselect=: searching on file system with SQL queries. =find= + =ls= + =awk=
+- =bingrep=: color =readelf=, more powerful =grep= for ELF files
+- =ripgrepall=: find everywhere: binary files, PDFs, images, music, video, etc
+- =stringsext=: Better searching Unicode strings, but performance may be better
+- =tealdeer=: tldr, documentation
 
 ** Windows managers
 *** i3
