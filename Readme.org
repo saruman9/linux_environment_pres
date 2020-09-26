@@ -1224,13 +1224,59 @@ and you on the horse!
 
 ** Windows managers
 *** i3
+
+#+ATTR_REVEAL: :frag (appear)
+- Minimalism (i3 is fast)
+- Screen real estate
+- Keyboard-driven workflow
+- Flexibility
+- Workspaces
+
+#+BEGIN_NOTES
+- Меньше оперативной памяти, возможность запускать в контейнерах, виртуальных
+  машинах. Устанавливаю только то, что мне нужно, нет ничего лишнего.
+- Не нужно управлять окнами, всегда на полный экран.
+- Абсолютно любое действие можно забиндить на клавишу. Мышь абсолютно не нужна.
+- Из утилит (Unix-way) можно сделать любой DE, который тебе удобен.
+- Рабочие пространства, на которых ты можешь чётко зафиксировать определённые
+  программы, их расположение и поведение.
+#+END_NOTES
+
+#+REVEAL: split
+
+Live demo
+
 *** Panel
-*** dmenu, rofi
+
+- i3bar
+- i3status
+- i3status-rust
+- i3blocks
+- polybar
+- conky
+- j4status
+- many many others
+
+#+REVEAL: split
+
+Live demo
+
+*** +dmenu+ rofi
+
+Featured dynamic menu for X.
+
+#+REVEAL: split
+
+Live demo
+
 *** dunst
 
-Notification
+Dunst is a highly configurable and lightweight notification daemon.
 
-*** Clipboard manager
+#+REVEAL: split
+
+Live demo
+
 * Tips'n'Tricks or fully automation
 ** Configurations
 
