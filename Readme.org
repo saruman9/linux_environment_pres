@@ -788,7 +788,11 @@ Use VIM everywhere!
   large set of development and other tools
 - Having every command be an Emacs Lisp function enables commands to DWIM (Do
   What I Mean). For example, a =switch-or-split-window=
-- "An OS inside an OS"
+
+#+REVEAL: split
+
+"An OS inside an OS"
+[[./images/real_programmers.png]]
 
 #+ATTR_REVEAL: :frag (appear)
 Rust ♥️ Emacs = remacs
@@ -1280,39 +1284,94 @@ Live demo
 * Tips'n'Tricks or fully automation
 ** Configurations
 
-Chezmoi — sync configs for everything.
+One configuration for everything: PC, Laptop, Work, Guest/Virtual PC,
+Smartphone, Router, Server etc?
 
-Check directories and files in home directory and delete it or add to ignore list or add to configuration list files.
+#+REVEAL: split
 
-Check unneeded packages and install new or delete unneeded.
+#+ATTR_REVEAL: :frag (appear)
+- A custom shell scripts?
+- A bare git repo?
+- An existing dotfile manager: homeshick, rcm, GNU Stow, yadm, etc?
 
-You can encrypt files, part of elements, use different configurations for different machines.
+#+REVEAL: split
 
-*** Dark and bright
+Chezmoi — manage your dotfiles across multiple machines, securely.
 
-Pain in the eyes or headache.
+- Flexible: OS (Linux, MacOS, Windows, FreeBSD, Termux), Arch, Hostname
+- Personal and secure (1Password, Bitwarden, gopass, KeePassXC, LastPass, pass,
+  Vault, CLI tool and GnuPG)
+- Transparent: dry run mode, one-to-one map of files and symlinks
+- Declarative (templates, metadata in names) and robust (atomic operations)
 
-Auto switching temperature of color, but can't automate the detecting of the light switch off.
+#+REVEAL: split
+
+[[https://github.com/saruman9/dotfiles][My Dotfiles]]
+
+*** File system cleanliness
+
+- =chezmoi unmanaged= + =fzf= and ignored files
+- Scripts for checking unneeded packages, installing packages
+- Encrypted sensitive information and private repositories
+
+*** Dark and light
+
+[[./images/red_eye.jpg]]
+
+This eye are looking at you like a Winduzyatnik
+
+#+REVEAL: split
+
+- Auto switching temperature of display (without light detector)
+- Auto switching dark/light themes (no universal solution)
 
 ** VIM/Emacs everywhere
 
-Don't use mouse, because it need more time, than keyboard. Home row of your keyboard is your friend: speedup, less fever.
+#+ATTR_REVEAL: :frag (appear)
+- Don't use a mouse, because it need more time, than a keyboard
+- A home row of your keyboard is your friend: speedup, less fever
+- Xdotool + Emacs = edit everything in Emacs
+- VIM/Emacs keymaps and modes everything: browser, IDE, windows manager,
+  multiplexer, music player, torrent manipulation programs, mail, everything...
+  except Ghidra.
 
-Xdotool + Emacs = edit everything in Emacs
+** Presentations, reports, documents, messages
 
-VIM/Emacs keymaps and modes everything: browser, IDE (IDEA, eclipse, etc), windows manager, multiplexer, music player, torrent manipulation programs, mail, everything except Ghidra.
+Only plaintext:
+- diffing, manipulation with CLI tool
+- using version control system
+- emails without HTML and JS shits (Yandex.Mail, you place is in the hell)
+- more informative, more convertible, more security
 
-** Presentations, reports, documents
+*** How I use it
 
-Only plaintext, because you can diffing and use git for that.
+I can convert org-mode (asciidoc) to everything: plaintext, static HTML, LaTeX,
+PDF, presentations (beamer, reveal.js). I can generate books and reports from
+plaintext.
 
-I can convert org mode (asciidoc) to everything: plaintext, static HTML, LaTeX, PDF, presentations (beamer, reveal.js).
+#+REVEAL: split
 
-I can share sources and use parts of already wrote items.
+I can share sources or make easy review and use parts of already wrote items.
 
-I have many notes with ideas, presentations.
+#+REVEAL: split
 
-I sync between machines reports, documents for working with everywhere.
+I have many notes with ideas, presentations in structured plaintext format in
+version control systems.
+
+#+REVEAL: split
+
+I can sync all my documents (reports, books, presentations, ideas) between
+machines for working with it everywhere.
+
+** Smartphone
+
+#+ATTR_REVEAL: :frag (appear)
+- AOSP or similar
+- Open source utilities: F-Droid or GitHub + ADB
+- Termux for PC's work: SSH, running all Linux stuff (tmux, my Rust CLI
+  programs), using Chezmoi configurations
+- Sync with other devices: passwords, web history, music playlists, etc
+- VPN for working with remote (home, work, laptops, other) devices
 
 ** Metro workflow
 
@@ -1323,12 +1382,6 @@ Org mode, orgzly, git on mobile
 I don't use social networks and don't read news, I try to create and structure my knowledge. It's very helpful for me.
 
 Read issues, developers lists, write answers.
-
-** Mobile phone
-
-Use open source utilities: F-Droid.
-
-Use Termux actively: ssh, running all Linux stuff (tmux and my rust programs), share Chezmoi configs.
 
 ** Router, multimedia box
 
@@ -1368,3 +1421,5 @@ You must read [[https://github.com/jlevy/the-art-of-command-line][this]], becaus
 Like a book about CLI — https://github.com/learnbyexample/Command-line-text-processing.
 
 [[https://suckless.org/rocks/][Suckless]]. Develops many useful apps, but it's very minimal. One app — one function, you need recompile program for changing settings.
+
+Ожидаю от вас рассказа о вашем workflow.
