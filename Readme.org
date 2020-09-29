@@ -1160,6 +1160,12 @@ Mounting with user's permissions
 
 CLI pass manager. Powered by OpenPGP
 
+*** fzf
+
+A command-line fuzzy finder.
+
+Live demo
+
 *** systemd
 
 Not Unix way, but very useful
