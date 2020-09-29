@@ -1329,7 +1329,8 @@ This eye are looking at you like a Winduzyatnik
 
 #+ATTR_REVEAL: :frag (appear)
 - Don't use a mouse, because it need more time, than a keyboard
-- A home row of your keyboard is your friend: speedup, less fever
+- A home row of your keyboard is your friend: speedup and economy (keyboard with
+  lights)
 - Xdotool + Emacs = edit everything in Emacs
 - VIM/Emacs keymaps and modes everything: browser, IDE, windows manager,
   multiplexer, music player, torrent manipulation programs, mail, everything...
@@ -1373,21 +1374,35 @@ machines for working with it everywhere.
 - Sync with other devices: passwords, web history, music playlists, etc
 - VPN for working with remote (home, work, laptops, other) devices
 
-** Metro workflow
+** Subway workflow
 
-Edit, git add
+#+ATTR_REVEAL: :frag (appear)
+- Reading issues, mailing lists, writing answers (GitLab, GitHub apps)
+- Reviewing PR/MR, fixing small bugs (IDE or VIM if exist keyboard)
+- Writing notes, drafts of presentation (including this) with =orgzly=
+  (org-mode) and git for sync
+- +News from mail+, +RSS+, +RSS in Telegram+, I don't read news
+- Reading books on jailbroken Amazon Kindle (all formats and many features)
 
-Org mode, orgzly, git on mobile
+** Other devices (router, multimedia box, etc)
 
-I don't use social networks and don't read news, I try to create and structure my knowledge. It's very helpful for me.
+#+ATTR_REVEAL: :frag (appear)
+- All works on ArchLinux
+- One configuration for everything
+- Pi-hole, logger, route table, DNS server, proxy server with TLS, etc (replaced
+  by Mikrotik)
 
-Read issues, developers lists, write answers.
+#+REVEAL: split
 
-** Router, multimedia box
+Many firmwares are changed:
 
-All works on the ArchLinux.
-
-Pihole, multimedia combine player, I forget name.
+#+ATTR_REVEAL: :frag (appear)
+- Bookreader is jailbroken
+- Printer is jailbroken
+- Digital music player is jailbroken (Rockbox OS)
+- Vacuum cleaner with Ubuntu but not jailbroken yet (but with Russian voice
+  already)
+- I bought a car...
 
 ** Packages and open source
 
