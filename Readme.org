@@ -800,15 +800,6 @@ Use doc{,x}, ppt{,x}, xls{,x} and others if you really needed it.
 - vimdiff, rview, rvim
 - Ubiquitous
 
-#+REVEAL: split
-
-#+ATTR_HTML: :width 60%
-[[./images/vim_evangelism.png]]
-
-#+BEGIN_NOTES
-Use VIM everywhere!
-#+END_NOTES
-
 *** Emacs
 
 #+ATTR_HTML: :width 70%
@@ -1388,6 +1379,11 @@ This eye are looking at you like a Winduzyatnik
 - VIM/Emacs keymaps and modes everything: browser, IDE, windows manager,
   multiplexer, music player, torrent manipulation programs, mail, everything...
   except Ghidra.
+
+#+REVEAL: split
+
+#+ATTR_HTML: :width 60%
+[[./images/vim_evangelism.png]]
 
 ** Presentations, reports, documents, messages
 
