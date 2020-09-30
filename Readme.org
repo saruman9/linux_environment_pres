@@ -177,6 +177,10 @@ I'm the software evangelist I use
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
 
+#+REVEAL: split
+
+Not only Linux, but Open Source
+
 * Principles
 ** KISS
 
