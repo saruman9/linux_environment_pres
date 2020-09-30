@@ -1325,7 +1325,11 @@ Dunst is a highly configurable and lightweight notification daemon.
 
 Live demo
 
-* Tips'n'Tricks or fully automation
+* Life + IT Workflow
+#+BEGIN_NOTES
+Я буду идти от чисто технических привычек к более жизненным ситуациям.
+#+END_NOTES
+
 ** Configurations
 
 One configuration for everything: PC, Laptop, Work, Guest/Virtual PC,
@@ -1455,35 +1459,82 @@ Many firmwares are changed:
 
 ** Packages and open source
 
-It's cause why I not use NixOS.
+- Need a new software? Search in repositories and install it, that's all.
+- AUR or nix have many, many packages ([[https://repology.org/][Repology]]),
+  including for Windows OS, BlackArch have packages for penetration testers
 
-I have custom PKGBUILDs for all patched software (also cracks^Winitial settings for proprietary software). I also maintainer of some packages in AUR and regulate other packages (ask update, delete, permissions of maintaining).
+#+REVEAL: split
+
+I have custom PKGBUILDs for all patched software (also cracks^Winitial settings
+for proprietary software).
+
+I'm [[https://github.com/saruman9/pkgbuilds/][maintainer of some packages in
+AUR]] and I regulates other packages (asks to update, to delete, to change
+permissions of maintaining).
 
 ** Automate everything
 
-Follow for the tickets, news, sites (scripts in Python, PHP, Rust).
+If you do the same thing a second time, then it needs to be automated.
 
-First target was CDO. I don't like specific subjects, but need info about it: I wrote bot for VK, which sent me messages and documents from group. Hack the CDO.
+#+REVEAL: split
 
-No ads everywhere, scripting blocks for even complex ads from Yandex.
+#+ATTR_REVEAL: :frag (appear)
+- Analyzing the OS (packages, configurations, status, etc)
+- Smart notifications (TODO, pomodoro, honeypots, China'a attacks, etc)
+- Scraping of sites (buying tickets, news, generating API)
+- All around RE/pentest
+- Deleting complex ads (Yandex, for example)
+- Specific subjects
+
+#+ATTR_REVEAL: :frag (appear)
++JavaScript+, +PHP+, +Python+, Rust, Bash
+
+#+BEGIN_NOTES
+Первый раз — запись в ЦДО.
+
+Меня нет в социальных сетях, на некоторые пары я не ходил, но следить за
+информацией было необходимо, поэтому пришлось писать бота для VK, который
+отправлял мне все сообщения и документы из группы.
+#+END_NOTES
 
 ** Statistics about everything
 
-I inspect everything: our family budget, the books that I read, movies and serials that I watched, my sports actions, party board games, etc. I use text files for managing it all, I can filter, create reports, sharing information between machines, all is encrypted.
-I use GUI or sites for something tasks, because my wife can't use my tools. I export information from this and continue use my tools for that.
+- Finance budget
+- Books
+- Movies, serials, TV shows
+- Sports activity
+- Board games
+- Quotes and situations from life
+
+#+BEGIN_NOTES
+Я отказался от половины, т. к. не хватало времени, но из-за того, что у меня
+плохая память, я могу перечитать снова книгу, пересмотреть кино, не вижу
+прогресса в чём-то.
+#+END_NOTES
+
+*** Text vs GUI
+
+I uses text files for managing it all (filtering, creating reports, sharing
+information between machines), all is encrypted.
+
+#+BEGIN_NOTES
+Для части задач пришлось переключиться на GUI или сайт, т. к. мои родная не
+могут пользоваться теми же инструментами, что и я. Я регулярно экспортирую
+информацию и синхронизируюсь.
+#+END_NOTES
 
 * Summary
 
-10% of all, needed time
+#+ATTR_REVEAL: :frag (appear)
+- Just a drop in the bucket
+  - [[https://github.com/jlevy/the-art-of-command-line][Master the command line]]
+  - [[https://github.com/learnbyexample/Command-line-text-processing][A book about CLI]]
+- Technologies advances extremely rapidly
+- It's only my workflow
 
-Needed person, who can say me: "It's useful, taste it"
-
-I want to create smart home, but it's very hard, because you should create user-friendly interface.
-
-You must read [[https://github.com/jlevy/the-art-of-command-line][this]], because I don't want to share information, which already exist in structural forms.
-
-Like a book about CLI — https://github.com/learnbyexample/Command-line-text-processing.
-
-[[https://suckless.org/rocks/][Suckless]]. Develops many useful apps, but it's very minimal. One app — one function, you need recompile program for changing settings.
-
-Ожидаю от вас рассказа о вашем workflow.
+#+BEGIN_NOTES
+- Малая часть, я не хотел делиться той информацией, что и так есть в интернете
+- Нужен человек, который бы сообщал мне, что стоит попробовать, а что нет, т. к.
+  на всё не хватает времени
+- Ожидаю рассказа о вашем workflow
+#+END_NOTES
