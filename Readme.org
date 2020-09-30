@@ -730,6 +730,43 @@ I use it everywhere:
 #+ATTR_HTML: :width 75%
 [[./images/git-instaweb.png]]
 
+*** QEMU (KVM)
+
+A free and open-source emulator and virtualizer that can perform hardware
+virtualization.
+
+- User-mode and system emulation
+- The emulation of various architectures and periphery
+- TUI, CLI
+- Integration
+- Open Source
+
+*** WINE
+
+Wine Is Not an Emulator is a free and open-source compatibility layer that aims
+to allow application software and computer games developed for Microsoft Windows
+to run on Unix-like operating systems.
+
+- Debugging
+- Backward compatibility
+- Non-x86 architectures
+- RE of Windows
+
+#+REVEAL: split
+
+Other versions and uses:
+
+- CrossOver
+- Cedega/WineX
+- Darwine
+- Pipelight
+- Proton
+- ReactOS
+- Odin (OS/2)
+- Parallels Desktop and VirtualBox
+- WineD3D
+- etc
+
 *** Backups
 
 *restic*
@@ -1214,6 +1251,12 @@ Not Unix way, but very useful
 - =pgrep=, =pidof=: find process
 - =kill=, =pkill=, =killall=: then kill it
 - =ps=, =htop=: process list
+
+#+REVEAL: split
+
+*radare2*
+
+[[./images/r2.png]]
 
 *** Rust section
 
