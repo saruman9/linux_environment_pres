@@ -322,7 +322,7 @@ Mostly CLI and TUI
 
 #+REVEAL: split
 
-- i2p
+- I2P
   - mail
   - messenger
   - IRC
