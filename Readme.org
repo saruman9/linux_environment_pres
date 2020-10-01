@@ -103,7 +103,7 @@ First time in 2006 ([[https://xakep.ru/2007/02/26/36939/][Windows Vista vs Mandr
 #+REVEAL_HTML: </div>
 
 #+BEGIN_NOTES
-Вот далеко не целый список ОС, которые я пробовал или использовал.
+Вот далеко не весь список ОС, которые я пробовал или использовал.
 
 Среди интересных (о которых *не будет рассказано* далее):
 - MeeGo — Moblin (Intel) + Maemo (Nokia) = Nokia N900
@@ -137,9 +137,6 @@ Open source community member (maintainer, developer)
 Являюсь maintainer некоторых пакетов в ArchLinux, ну и разработчиком соответственно. Пытаюсь по мере
 возможности принимать участие *в обсуждении направления развития* ОС или утилиты, которые мне
 интересны.
-
-Стараюсь писать небольшие заметки и статьи для общего пользования, но качества они не очень
-хорошего, поэтому в массы их не выкладываю.
 
 Для *всего контента (статьи, доклады, настольные игры)*, что я произвожу стараюсь выкладывать
 исходные тексты.
@@ -180,6 +177,10 @@ I'm the software evangelist I use
 #+REVEAL: split
 
 Not only Linux, but Open Source
+
+#+BEGIN_NOTES
+Рассказано будет не только о Linux, но об open source в том числе.
+#+END_NOTES
 
 * Principles
 ** KISS
@@ -259,7 +260,6 @@ Command-line interface
 #+END_NOTES
 
 ** Why not others?
-
 *** Ubuntu, Fedora, Mint, Manjaro, etc
 
 Because these are very fat OSs:
@@ -273,16 +273,17 @@ But for some reason these distributions are very useful
 
 Fuss too much with them
 
+#+ATTR_HTML: :width 50%
+[[./images/gentoo.jpg]]
+
 *** NixOS, GuixSD
 
 NixOS:
-
 - DSL
 - some +my+ issues
 - FHS (Filesystem Hierarchy Standard)
 
 GuixSD:
-
 - very unstable
 - libre OS
 
@@ -304,50 +305,55 @@ Mostly CLI and TUI
 #+BEGIN_NOTES
 - Из коробки есть поддержка практически любых сетевых соединений, что-то доставляется плагинами.
 - Минималистичная настройка, использую там, где требуется *настроить один раз и забыть*.
-- Всё, что требуется для сетевого соединения. Без каких-либо зависимостей от Intel.
+- Всё, что требуется для сетевого соединения. Без каких-либо зависимостей. От Intel.
 #+END_NOTES
 
-*** Tor and I2P
+*** Tor and proxies
 
 #+ATTR_REVEAL: :frag (appear)
 - SOCKS
   - =tsocks=, =proxychains-ng=
-  - =libproxy=
   - environment variables
 - HTTP
   - =httptunnel=
   - =proxytunnel=
   - =corkscrew=
-- torify (applications w/o proxy settings)
+- =torify= (applications w/o proxy settings)
 
-#+REVEAL: split
-
-- I2P
-  - mail
-  - messenger
-  - IRC
-  - iMule
-  - etc
-
-#+ATTR_REVEAL: :frag appear
-/Средство, позволяющее ежедневно водить копирастам, спецслужбам и прочим пидорам хуём по губам/ (c) Луркоморье
+#+BEGIN_NOTES
+- Соксификаторы приложений, которые не умеют в SOCKS.
+- Обход firewall, NAT. Проброс SSH или любого другого низкоуровневого протокола
+  (TCP, UDP) через HTTP.
+- Проброс через Tor сеть.
+#+END_NOTES
 
 *** Web browsers
 
 - w3m
 - elinks
 
-Useful for fast browsing, scraping from console, previewing in file managers and many other cases
+[[./images/w3m.png]]
+
+#+BEGIN_NOTES
+Полезно для скоростного сёрфинга, скрапинга сайтов, предпросмотра в файловых
+менеджерах или почтовых клиентах.
+#+END_NOTES
 
 #+REVEAL: split
 
-Firefox
+Firefox + extensions
 
-Other VIM-based browsers are unstable and have less features (based on WebKit, didn't have Rust Quantum engine):
+Other VIM-based browsers are unstable and have less features (based on WebKit,
+didn't have Rust Quantum engine):
 
 - luakit
 - surf
 - qutebrowser
+
+#+BEGIN_NOTES
+Среди расширений могу рекомендовать uMatrix, uBlock, Dark Background,
+Tampermonkey.
+#+END_NOTES
 
 #+REVEAL: split
 
@@ -367,7 +373,7 @@ Hint mode
 
 #+REVEAL: split
 
-Console mode
+Console mode (Tridactyl)
 
 #+ATTR_HTML: :width 90%
 [[./images/tridactyl.png]]
@@ -390,7 +396,6 @@ Extractors list
 #+ATTR_HTML: :width 70%
 [[./images/yt_dl_list.png]]
 
-
 #+REVEAL: split
 
 tridactyl / etc + youtube-dl + mpv / mpd
@@ -398,8 +403,6 @@ tridactyl / etc + youtube-dl + mpv / mpd
 =
 
 video/audio ninja (you is godlike with i3)
-
-#+REVEAL: split
 
 Restrictions, advertising? What are you talking about?
 
@@ -420,13 +423,9 @@ Example of default output
 *** wget — aria2
 
 - Faster (segmented downloading)
-- BitTorrent extensions (DHT, PEX, Multi-Tracker, UDP tracker, local peer discovery, etc)
+- BitTorrent extensions (DHT, PEX, Multi-Tracker, UDP tracker, local peer
+  discovery, etc)
 - More protocols (FTP, Metalink, etc)
-
-# *** Cloud storages
-
-# WebDAV
-# gvfs with encryption
 
 *** Torrents
 *Transmission*
@@ -452,6 +451,11 @@ Torrent info
 - Modules
 - Media futures
 - node.js & browser +needed Rust/wasm version+
+
+#+BEGIN_NOTES
+Возможность расширять модулями, поддержка загрузки отдельно дорожек, субтитров,
+в зависимости от переключения в плеере.
+#+END_NOTES
 
 *** Mail — (neo)mutt + OfflineIMAP + getmail + msmtp + etc
 
@@ -545,17 +549,19 @@ profanity Pip-Boy
 
 As mutt, but for RSS
 
+#+ATTR_HTML: :width 80%
+[[./images/newsboat.jpg]]
+
+#+BEGIN_NOTES
+В паре с mpv и youtube-dl можно сделать youtube клиент.
+#+END_NOTES
+
 #+REVEAL: split
 
 *Telegram*
 
 Channels with bots, which sends RSS (Reddit, Twitter, HackerNews, Lobste.rs,
-etc) to channels
-
-#+BEGIN_NOTES
-Now I don't read news, very much time, which I can spend for
-developing/writing/etc.
-#+END_NOTES
+etc) to channels.
 
 *** Remote desktop
 
@@ -565,9 +571,13 @@ developing/writing/etc.
   speedup)
 
 - Hard tasks
-
   - VNC
   - qemu with SPICE + VNC
+
+#+BEGIN_NOTES
+Иногда необходимо удалённо запустить что-то тяжёлое в эмуляторе и ноутбуком
+подключиться, как тонким клиентом.
+#+END_NOTES
 
 ** Multimedia
 *** Image viewers
@@ -576,7 +586,6 @@ developing/writing/etc.
 - =fbi=
 - =fbv=
 
-#+ATTR_REVEAL: :frag (appear)
 Don't forget configure tty!
 
 #+REVEAL: split
@@ -607,17 +616,16 @@ Throw out your GIMP. A joke of course. Throw out your Photoshop.
   - GUI
   - TUI
   - CLI
-- mpdscribble
+- mpdscribble (Last.fm)
 
 #+BEGIN_NOTES
-I don't like music streaming services, because too much choices. I have player,
-which firmware is open source, I create tools for syncing playlists. I create
-mini iTunes.
+Не люблю музыку на стриминговых сервисах, содержу свою библиотеку, синхронизирую
+между устройствами.
 #+END_NOTES
 
 #+REVEAL: split
 
-ncmpcpp
+ncmpcpp (mpd client)
 
 #+ATTR_HTML: :width 100%
 [[./images/ncmpcpp.png]]
@@ -633,11 +641,11 @@ ncmpcpp
 *FFmpeg*
 
 Converting, hardware rendering, screencasting, input/output many formats
-(camera, screens, devices)
+(camera, screens, devices).
 
 *** Metadata
 
-Many interesting things you can know from metadata of video, images and data
+Many interesting things you can know from metadata of video, images and data.
 
 - ExifTool (audio, video, images, documents, etc)
 - exiv2 (images)
@@ -663,7 +671,8 @@ Many interesting things you can know from metadata of video, images and data
 *Kitty*
 - GPU rendering
 - Python
-- More features (Unicode glyphs, many nice bindings, graphics etc)
+- More features (Unicode glyphs, many nice bindings, graphics, client-server
+  SSH, multiplexer, etc)
 
 *** Terminal multiplexer. tmux
 
@@ -772,11 +781,6 @@ Other versions and uses:
 *restic*
 
 Encrypted snapshots, many backends + systemd
-
-# *** Synchronization
-
-# Syncthing
-# Unison
 
 ** Text editing
 
@@ -947,7 +951,8 @@ Working with source code
 - Inclusion of artwork, and process or spot colour
 
 #+BEGIN_NOTES
-Использую для больших докладов, научных работ.
+Использую для больших докладов, научных работ. Записывал все лекции с помощью
+LaTeX.
 #+END_NOTES
 
 *** Zathura
@@ -969,12 +974,16 @@ Use for work
 Use for _*real*_ work
 
 - Including files
-- [[https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#lists][Normal lists with complex content]]
+- [[https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#lists][Normal
+  lists with complex content]]
 - [[https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#links][Anchors]]
-- [[https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#images][Formatted images]]
-- [[https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#source-code][Powerful code blocks]]
+- [[https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#images][Formatted
+  images]]
+- [[https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#source-code][Powerful
+  code blocks]]
 - Comments
-- [[https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#tables][Tables for the people]]
+- [[https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#tables][Tables
+  for the people]]
 - ToC
 - [[https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#bibliography][Bibliography]]
 - etc
@@ -1025,6 +1034,7 @@ Use my personal dict everywhere (editors, browser, shell, edit fields)
 - The list below is alternatives, not replace
 - For scripts you should use first order applications for compatibility
 - It's normal, that more than half applications were developed in Rust language
+  (r)
 
 *** Bash — Zsh
 
@@ -1250,7 +1260,31 @@ Not Unix way, but very useful
 
 *radare2*
 
+- rabin2
+- radiff2
+- rafind2
+- ragg2
+- rahash2
+- rarun2
+- rasign2
+- rasm2
+- rax2
+
+#+REVEAL: split
+
+r2
+
 [[./images/r2.png]]
+
+#+REVEAL: split
+
+*binwalk*
+
+- Disassembly scan
+- Signature scan
+- Extractions
+- Entropy
+- Binary diffing
 
 *** Rust section
 
