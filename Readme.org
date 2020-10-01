@@ -1218,6 +1218,7 @@ Not Unix way, but very useful
 
 *** Simple and useful tools for RE and life
 
+- =man=, =apropos=, =mandb=: throw out the Internet, you have manuals
 - =tee=: read from standard input and write to standard output and files
 - =mktemp=: create a temporary file or directory
 - =tr=: translate or delete characters
@@ -1233,15 +1234,17 @@ Not Unix way, but very useful
 - =iconv=: convert text from one character encoding to another
 - =file=: what is it?
 - =watch=: execute a program periodically, showing output
+- =shred=: burn after reading
 
 #+REVEAL: split
 
 - =inotifywait=: wait for changes to files using inotify
-- =ls{blk,pci,cpu,usb}=: block, PCI, CPU, USB devices
+- =ls{blk,pci,cpu,usb,mod}=: block, PCI, CPU, USB devices, kernel modules
 - =sudo=, but not =su= (=sudoedit= for editing files): I'm root
 - =pgrep=, =pidof=: find process
 - =kill=, =pkill=, =killall=: then kill it
 - =ps=, =htop=: process list
+- =sleep=: Zzz...
 
 #+REVEAL: split
 
@@ -1266,9 +1269,14 @@ and you on the horse!
 - =xsv=: very fast parsing of large CSV files
 - =fselect=: searching on file system with SQL queries. =find= + =ls= + =awk=
 - =bingrep=: color =readelf=, more powerful =grep= for ELF files
+
+#+REVEAL: split
+
 - =ripgrepall=: find everywhere: binary files, PDFs, images, music, video, etc
 - =stringsext=: Better searching Unicode strings, but performance may be better
 - =tealdeer=: tldr, documentation
+- =topgrade=: upgrade your system
+- =choose=: a human-friendly and fast alternative to cut and (sometimes) awk
 
 ** Windows managers
 *** i3
