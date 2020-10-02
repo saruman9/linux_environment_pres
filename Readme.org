@@ -1572,11 +1572,15 @@ information between machines), all is encrypted.
   - [[https://github.com/jlevy/the-art-of-command-line][Master the command line]]
   - [[https://github.com/learnbyexample/Command-line-text-processing][A book about CLI]]
 - Technologies advances extremely rapidly
+- Productivity is more free time
 - It's only my workflow
 
 #+BEGIN_NOTES
 - Малая часть, я не хотел делиться той информацией, что и так есть в интернете
 - Нужен человек, который бы сообщал мне, что стоит попробовать, а что нет, т. к.
   на всё не хватает времени
+- Использование эффективного workflow, инструментов не делает меня
+  работоспособнее (я бы повесился работать много), это даёт мне больше времени
+  на занятие чем-то более интересным.
 - Ожидаю рассказа о вашем workflow
 #+END_NOTES
