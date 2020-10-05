@@ -1560,7 +1560,7 @@ I uses text files for managing it all (filtering, creating reports, sharing
 information between machines), all is encrypted.
 
 #+BEGIN_NOTES
-Для части задач пришлось переключиться на GUI или сайт, т. к. мои родная не
+Для части задач пришлось переключиться на GUI или сайт, т. к. мои родные не
 могут пользоваться теми же инструментами, что и я. Я регулярно экспортирую
 информацию и синхронизируюсь.
 #+END_NOTES
