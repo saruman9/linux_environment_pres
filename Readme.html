@@ -1,0 +1,2864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>How to survive^W live with Linux</title>
+<meta name="author" content="Abc Xyz"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="./reveal.js/css/theme/night.css" id="theme"/>
+
+<link rel="stylesheet" href="override.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+<h2>How to survive^W live with Linux</h2><p>Abc Xyz</p><p><a href="https://t.me/dura_lex">@dura_lex</a></p>
+</section>
+
+<section>
+<section id="slide-orgf0f4a6f" data-background="./images/linux_matrix.png">
+<h2 id="orgf0f4a6f">How to <del>survive</del> live with Linux</h2>
+<p>
+↑Title for Windows users↑
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org46126af">
+<h2 id="org46126af">Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#/slide-1">1. Introduction</a></li>
+<li><a href="#/slide-2">2. Principles</a></li>
+<li><a href="#/slide-3">3. OS</a></li>
+<li><a href="#/slide-4">4. Software</a></li>
+<li><a href="#/slide-5">5. Life + IT Workflow</a></li>
+<li><a href="#/slide-6">6. Summary</a></li>
+</ul>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-1">
+<h2 id="1"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-1-1">
+<h3 id="1-1"><span class="section-number-3">1.1</span> Motivation</h3>
+<ul>
+<li class="fragment appear">Many questions about tools/tips/scripting/etc in Linux</li>
+<li class="fragment appear">Many mentions about my life with Linux</li>
+<li class="fragment appear">You should know, what you are losing (Linux vs Windows)</li>
+<li class="fragment appear">Sharing experience and knowledge</li>
+
+</ul>
+
+<aside class="notes">
+<ul>
+<li>Часто спрашивают совета при работе в Linux, какие инструменты использую.</li>
+<li>Частенько не обходится без шуток. Странно, что сейчас не пошутили, пока всё настраивал.</li>
+<li>Windows не позволяет делать множество вещей.</li>
+<li>В очередной раз хочу рассказать о том, в чём сам разобрался.</li>
+
+</ul>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-1-2">
+<h3 id="1-2"><span class="section-number-3">1.2</span> Background</h3>
+<p>
+First time in 2006 (<a href="https://xakep.ru/2007/02/26/36939/">Windows Vista vs Mandriva: какую ОС
+  выбрать в 2007 году?</a>)
+</p>
+
+
+<div id="orgc96be8f" class="figure">
+<p><img src="./images/xakep.jpg" alt="xakep.jpg" width="30%" />
+</p>
+</div>
+
+<aside class="notes">
+<p>
+Дядя подарил журнал Хакер, на диске которого была Mandriva и <b>FreeBSD</b>. Со второй я вообще не понял,
+что нужно было делать, т. к. на тот момент <b>было 12 лет</b>, а первая заинтересовала, потому что
+компьютер был слабый и Windows Vista не тянул, а рабочий стол в виде <b>вращающегося куба</b> хотелось.
+</p>
+
+</aside>
+
+</section>
+<section>
+
+<div class="column" style="float:left; width: 30%">
+<ul>
+<li>Mandriva</li>
+<li>Ubuntu</li>
+<li>Runtu</li>
+<li>Fedora</li>
+<li>Debian</li>
+<li>Slackware</li>
+<li>SUSE</li>
+<li>MeeGo</li>
+<li>NixOS</li>
+<li>GuixSD</li>
+<li>Xubuntu</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:left; width: 30%">
+<ul>
+<li>CentOS</li>
+<li>Calculate</li>
+<li>Gentoo</li>
+<li>BolgenOS</li>
+<li>OpenWRT</li>
+<li>webOS</li>
+<li>ChromiumOS</li>
+<li>AstraLinux</li>
+<li>AltLinux</li>
+<li>Mageia</li>
+<li>Moblin</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:left; width: 30%">
+<ul>
+<li>Linux Mint</li>
+<li>Kubunutu</li>
+<li>Knoppix</li>
+<li>Damn Vulnerable Linux</li>
+<li>Backtrack</li>
+<li>Mythbuntu</li>
+<li>SteamOS</li>
+<li>Mandrake</li>
+<li>many others</li>
+
+</ul>
+</div>
+
+<aside class="notes">
+<p>
+Вот далеко не весь список ОС, которые я пробовал или использовал.
+</p>
+
+<p>
+Среди интересных (о которых <b>не будет рассказано</b> далее):
+</p>
+<ul>
+<li>MeeGo — Moblin (Intel) + Maemo (Nokia) = Nokia N900</li>
+<li>BolgenOS — всеми известная ОС Дениса Попова, которую нельзя не попробовать.</li>
+<li>ChromiumOS — изучал исходный код, написан великолепно, а главное — есть Rust.</li>
+<li>AstraLinux — очень много работал в своё время, даже писал модули ядра для мандатной системы.</li>
+<li>Backtrack — WHAX + Auditor Security Collection; все ли помнят, откуда пришла KaliLinux?</li>
+<li>SteamOS — ставил основной системой для игр, когда был глупым, толку никакого.</li>
+
+</ul>
+
+</aside>
+
+</section>
+<section>
+
+<p>
+Arch Linux since 2013
+</p>
+
+
+<div id="orge46f7ab" class="figure">
+<p><img src="./images/archlinux_logo.png" alt="archlinux_logo.png" width="70%" />
+</p>
+</div>
+
+<aside class="notes">
+<p>
+Примерно на <b>первом-втором курсе</b> я купил ноутбук и установил туда ArchLinux, с тех пор <b>ни разу не
+переустанавливал</b>, только обновлял пакеты и настройки.
+</p>
+
+</aside>
+
+</section>
+<section>
+
+<p>
+Open source community member (maintainer, developer)
+</p>
+
+
+<div id="org84e6f8c" class="figure">
+<p><img src="./images/oss.jpg" alt="oss.jpg" width="70%" />
+</p>
+</div>
+
+<aside class="notes">
+<p>
+Являюсь maintainer некоторых пакетов в ArchLinux, ну и разработчиком соответственно. Пытаюсь по мере
+возможности принимать участие <b>в обсуждении направления развития</b> ОС или утилиты, которые мне
+интересны.
+</p>
+
+<p>
+Для <b>всего контента (статьи, доклады, настольные игры)</b>, что я произвожу стараюсь выкладывать
+исходные тексты.
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-1-3">
+<h3 id="1-3"><span class="section-number-3">1.3</span> Disclaimer</h3>
+<p>
+I'm the software evangelist I use
+</p>
+
+<aside class="notes">
+<p>
+Моя любимая рубрика.
+</p>
+
+<p>
+К тому, про что я буду рассказывать, буду относиться <b>предвзято</b>.
+</p>
+
+</aside>
+
+<div class="container" style="display:flex; align-items:center">
+<div class="column" style="float:left; width: 20%">
+
+<div id="orga8f21d5" class="figure">
+<p><img src="./images/rust_logo.png" alt="rust_logo.png" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:left; width: 20%">
+
+<div id="org08f7ab8" class="figure">
+<p><img src="./images/spacemacs_logo.png" alt="spacemacs_logo.png" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:left; width: 20%">
+
+<div id="org37aa6bd" class="figure">
+<p><img src="./images/ghidra_logo.png" alt="ghidra_logo.png" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:left; width: 20%">
+
+<div id="orgcdc5969" class="figure">
+<p><img src="./images/archlinux_logo_mini.png" alt="archlinux_logo_mini.png" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:left; width: 20%">
+
+<div id="org768cec1" class="figure">
+<p><img src="./images/gitlab_logo.png" alt="gitlab_logo.png" />
+</p>
+</div>
+</div>
+</div>
+
+</section>
+<section>
+
+<p>
+Not only Linux, but Open Source
+</p>
+
+<aside class="notes">
+<p>
+Рассказано будет не только о Linux, но об open source в том числе.
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-2">
+<h2 id="2"><span class="section-number-2">2</span> Principles</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-2-1">
+<h3 id="2-1"><span class="section-number-3">2.1</span> KISS</h3>
+<p>
+keep it simple stupid
+</p>
+
+
+<div id="org389d8f5" class="figure">
+<p><img src="./images/archlinux_kiss.jpg" alt="archlinux_kiss.jpg" width="90%" class="fragment (appear)" />
+</p>
+</div>
+
+<aside class="notes">
+<p>
+Термин был придуман в ВВС США, <b>главой Lockheed</b>. Самолёты должны быть настолько простыми, что
+<b>любой механик мог их починить</b> между боями.
+</p>
+
+<p>
+В нашем Linux мирке этот акроним расшифровывается немного по-другому, но значение остаётся тем же. Я
+стараюсь <b>следовать этому принципу</b>, так же, как и другим в <b>Unix-way</b>, например, программа должна
+делать только <b>одну работу хорошо</b>. Чаще всего GUI приложения в данную категорию не попадают, потому
+что они комплексные, как минимум там нужно понимать, как работают потоки.
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-2-2">
+<h3 id="2-2"><span class="section-number-3">2.2</span> TUI</h3>
+<p>
+Text-based user interface
+</p>
+
+
+<div id="org3d6183c" class="figure">
+<p><img src="./images/Fdedit.png" alt="Fdedit.png" width="900" />
+</p>
+</div>
+
+<aside class="notes">
+<p>
+Текстовый интерфейс может быть достаточно разным, но скорее всего вы привыкли его видеть таким,
+каким он представлен на рисунке (Windows).
+</p>
+
+<p>
+Это и есть соблюдение принципов KISS.
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-2-3">
+<h3 id="2-3"><span class="section-number-3">2.3</span> CLI</h3>
+<p>
+Command-line interface
+</p>
+
+
+<div id="org469a76e" class="figure">
+<p><img src="./images/cli.png" alt="cli.png" width="90%" />
+</p>
+</div>
+
+<aside class="notes">
+<ul>
+<li>легко использовать</li>
+<li>легко переносить</li>
+<li>легко разрабатывать</li>
+<li>чистый KISS</li>
+
+</ul>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-3">
+<h2 id="3"><span class="section-number-2">3</span> OS</h2>
+<p>
+*It's my opinion, for my workflow
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-3-1">
+<h3 id="3-1"><span class="section-number-3">3.1</span> ArchLinux</h3>
+<ul>
+<li class="fragment appear">KISS (no bloatware and unnecessary services)</li>
+<li class="fragment appear">Stability &amp; Reliability (rolling release)</li>
+<li class="fragment appear">Arch Wiki</li>
+<li class="fragment appear"><code>pacman</code></li>
+<li class="fragment appear">Arch User Repository</li>
+<li class="fragment appear">Perfect learning base</li>
+<li class="fragment appear">Arch Linux Community (no companies, no corporate ties)</li>
+<li class="fragment appear">Flexibility &amp; Customization</li>
+
+</ul>
+
+<aside class="notes">
+<ul>
+<li><b>Нет ничего лишнего</b>, только то, что вы сами установили и настроили.</li>
+<li>Да, не удивляйтесь. Пакеты можно <b>обновлять только все разом</b>, соответственно в любой промежуток
+времени тестирование проходит именно на последних версиях пакетов. Баги возникают только <b>из-за
+конфликтов файлов конфигураций</b>.</li>
+<li>Возникли проблемы на любом Linux — читай Arch Wiki.</li>
+<li>Пожалуй, лучший пакетный менеджер, к тому же самый быстрый.</li>
+<li>Любой пакет из git репозитория. Есть <b>всё, что душе угодно</b>.</li>
+<li>Хотите познать Linux, ставьте ArchLinux.</li>
+<li>Яркий пример продукта, который делается сообществом (как с положительной, так и отрицательной
+точки зрения).</li>
+<li>Один из самых разумно-гибких дистрибутивов.</li>
+
+</ul>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-3-2">
+<h3 id="3-2"><span class="section-number-3">3.2</span> Why not others?</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-3-2-1">
+<h4 id="3-2-1"><span class="section-number-4">3.2.1</span> Ubuntu, Fedora, Mint, Manjaro, etc</h4>
+<p>
+Because these are very fat OSs:
+</p>
+<ul>
+<li>a lot of unused software</li>
+<li>many configuration files</li>
+<li>a lot of strange behavior</li>
+
+</ul>
+
+<p>
+But for some reason these distributions are very useful
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-3-2-2">
+<h4 id="3-2-2"><span class="section-number-4">3.2.2</span> Gentoo, LFS</h4>
+<p>
+Fuss too much with them
+</p>
+
+
+<div id="orgc63204d" class="figure">
+<p><img src="./images/gentoo.jpg" alt="gentoo.jpg" width="50%" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-3-2-3">
+<h4 id="3-2-3"><span class="section-number-4">3.2.3</span> NixOS, GuixSD</h4>
+<p>
+NixOS:
+</p>
+<ul>
+<li>DSL</li>
+<li>some <del>my</del> issues</li>
+<li>FHS (Filesystem Hierarchy Standard)</li>
+
+</ul>
+
+<p>
+GuixSD:
+</p>
+<ul>
+<li>very unstable</li>
+<li>libre OS</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-4">
+<h2 id="4"><span class="section-number-2">4</span> Software</h2>
+<p>
+Mostly CLI and TUI
+</p>
+
+<aside class="notes">
+<p>
+Только тот софт, которым пользуюсь я.
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-4-1">
+<h3 id="4-1"><span class="section-number-3">4.1</span> Internet</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-4-1-1">
+<h4 id="4-1-1"><span class="section-number-4">4.1.1</span> Network managers</h4>
+<ul>
+<li>NetworkManager (<code>nmcli</code>, <code>nmtui</code>)</li>
+<li>systemd-networkd</li>
+<li>iwd</li>
+
+</ul>
+
+<aside class="notes">
+<ul>
+<li>Из коробки есть поддержка практически любых сетевых соединений, что-то доставляется плагинами.</li>
+<li>Минималистичная настройка, использую там, где требуется <b>настроить один раз и забыть</b>.</li>
+<li>Всё, что требуется для сетевого соединения. Без каких-либо зависимостей. От Intel.</li>
+
+</ul>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-4-1-2">
+<h4 id="4-1-2"><span class="section-number-4">4.1.2</span> Tor and proxies</h4>
+<ul>
+<li class="fragment appear">SOCKS
+<ul>
+<li><code>tsocks</code>, <code>proxychains-ng</code></li>
+<li>environment variables</li>
+
+</ul></li>
+<li class="fragment appear">HTTP
+<ul>
+<li><code>httptunnel</code></li>
+<li><code>proxytunnel</code></li>
+<li><code>corkscrew</code></li>
+
+</ul></li>
+<li class="fragment appear"><code>torify</code> (applications w/o proxy settings)</li>
+
+</ul>
+
+<aside class="notes">
+<ul>
+<li>Соксификаторы приложений, которые не умеют в SOCKS.</li>
+<li>Обход firewall, NAT. Проброс SSH или любого другого низкоуровневого протокола
+(TCP, UDP) через HTTP.</li>
+<li>Проброс через Tor сеть.</li>
+
+</ul>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-4-1-3">
+<h4 id="4-1-3"><span class="section-number-4">4.1.3</span> Web browsers</h4>
+<ul>
+<li>w3m</li>
+<li>elinks</li>
+
+</ul>
+
+
+<div id="org8691212" class="figure">
+<p><img src="./images/w3m.png" alt="w3m.png" />
+</p>
+</div>
+
+<aside class="notes">
+<p>
+Полезно для скоростного сёрфинга, скрапинга сайтов, предпросмотра в файловых
+менеджерах или почтовых клиентах.
+</p>
+
+</aside>
+
+</section>
+<section>
+
+<p>
+Firefox + extensions
+</p>
+
+<p>
+Other VIM-based browsers are unstable and have less features (based on WebKit,
+didn't have Rust Quantum engine):
+</p>
+
+<ul>
+<li>luakit</li>
+<li>surf</li>
+<li>qutebrowser</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+Среди расширений могу рекомендовать uMatrix, uBlock, Dark Background,
+Tampermonkey.
+</p>
+
+</aside>
+
+</section>
+<section>
+
+<p>
+VIM plugins:
+</p>
+
+<ul>
+<li>Pendactyl (only Extended Support Release)</li>
+<li>Tridactyl</li>
+<li>Vimium</li>
+<li>Vimium C (current)</li>
+
+</ul>
+
+</section>
+<section>
+
+<p>
+Hint mode
+</p>
+
+
+<div id="orgf8fdb5e" class="figure">
+<p><img src="./images/vimium_c.png" alt="vimium_c.png" width="90%" />
+</p>
+</div>
+
+</section>
+<section>
+
+<p>
+Console mode (Tridactyl)
+</p>
+
+
+<div id="org2a894f3" class="figure">
+<p><img src="./images/tridactyl.png" alt="tridactyl.png" width="90%" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-4-1-4">
+<h4 id="4-1-4"><span class="section-number-4">4.1.4</span> youtube-dl</h4>
+<p>
+<code>youtube-dl</code> usage
+</p>
+
+
+<div id="org20b9180" class="figure">
+<p><img src="./images/yt_dl.png" alt="yt_dl.png" width="70%" />
+</p>
+</div>
+
+<aside class="notes">
+<p>
+1000 и 1 способ скачать/получить ссылку видео, аудио и т. п.
+</p>
+
+</aside>
+
+</section>
+<section>
+
+<p>
+Extractors list
+</p>
+
+
+<div id="orga2f5c6e" class="figure">
+<p><img src="./images/yt_dl_list.png" alt="yt_dl_list.png" width="70%" />
+</p>
+</div>
+
+</section>
+<section>
+
+<p>
+tridactyl / etc + youtube-dl + mpv / mpd
+</p>
+
+<p>
+=
+</p>
+
+<p>
+video/audio ninja (you is godlike with i3)
+</p>
+
+<p>
+Restrictions, advertising? What are you talking about?
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-4-1-5">
+<h4 id="4-1-5"><span class="section-number-4">4.1.5</span> curl — httpie</h4>
+<ul>
+<li>simple using</li>
+<li>nice format output</li>
+<li>JSON parsing (<code>curl</code> + <code>jq</code>)</li>
+<li>etc</li>
+
+</ul>
+
+</section>
+<section>
+
+<p>
+Example of default output
+</p>
+
+
+<div id="org581af4a" class="figure">
+<p><img src="./images/httpie.png" alt="httpie.png" width="80%" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-4-1-6">
+<h4 id="4-1-6"><span class="section-number-4">4.1.6</span> wget — aria2</h4>
+<ul>
+<li>Faster (segmented downloading)</li>
+<li>BitTorrent extensions (DHT, PEX, Multi-Tracker, UDP tracker, local peer
+discovery, etc)</li>
+<li>More protocols (FTP, Metalink, etc)</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-4-1-7">
+<h4 id="4-1-7"><span class="section-number-4">4.1.7</span> Torrents</h4>
+<p>
+<b>Transmission</b>
+</p>
+
+<ul>
+<li>Client-server architecture</li>
+<li>Mobile client</li>
+<li>CLI client for scripts + TUI client — <code>tremc</code></li>
+
+</ul>
+
+
+<div id="org2019723" class="figure">
+<p><img src="./images/tremc_0.png" alt="tremc_0.png" width="70%" />
+</p>
+</div>
+
+</section>
+<section>
+
+<p>
+Torrent info
+</p>
+
+
+<div id="org33af540" class="figure">
+<p><img src="./images/tremc_1.png" alt="tremc_1.png" />
+</p>
+</div>
+
+</section>
+<section>
+
+<p>
+<b><del>peerflix</del></b> <b>WebTorrent</b>
+</p>
+
+<ul>
+<li>Streaming torrent client</li>
+<li>Modules</li>
+<li>Media futures</li>
+<li>node.js &amp; browser <del>needed Rust/wasm version</del></li>
+
+</ul>
+
+<aside class="notes">
+<p>
+Возможность расширять модулями, поддержка загрузки отдельно дорожек, субтитров,
+в зависимости от переключения в плеере.
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-4-1-8">
+<h4 id="4-1-8"><span class="section-number-4">4.1.8</span> Mail — (neo)mutt + OfflineIMAP + getmail + msmtp + etc</h4>
+<ul>
+<li>Customization
+<ul>
+<li>Key bindings</li>
+<li>Custom mail headers</li>
+<li>Favorite editors</li>
+<li>View, colors, sidebars</li>
+
+</ul></li>
+<li>Modules
+<ul>
+<li>Address books</li>
+<li>IMAP, POP3, SMTP clients</li>
+<li>Password managers</li>
+<li>Everywhere in sh/bash</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section>
+
+<ul>
+<li>GPG</li>
+<li>CLI</li>
+<li>No JS, HTML</li>
+
+</ul>
+
+</section>
+<section data-background="./images/neomutt.png">
+
+</section>
+</section>
+<section>
+<section id="slide-4-1-9">
+<h4 id="4-1-9"><span class="section-number-4">4.1.9</span> Messengers</h4>
+<p>
+<b>BitlBee</b> - IRC gateway
+</p>
+
+<div class="column" style="float:left; width: 50%">
+<ul>
+<li>XMPP</li>
+<li>Hipchat</li>
+<li>Hangouts</li>
+<li>Twitter</li>
+<li>Skype</li>
+<li>Telegram</li>
+<li>Facebook</li>
+<li>VK</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:left; width: 50%">
+<ul>
+<li>Matrix</li>
+<li>Discord</li>
+<li>Steam</li>
+<li>Mastodon</li>
+<li>Slack</li>
+<li>ICQ</li>
+<li>etc</li>
+
+</ul>
+</div>
+
+</section>
+<section>
+
+<p>
+BitlBee interface
+</p>
+
+
+<div id="org66456c0" class="figure">
+<p><img src="./images/bitlbee.png" alt="bitlbee.png" width="80%" />
+</p>
+</div>
+
+</section>
+<section>
+
+<p>
+<b>WeeChat</b> - IRC
+</p>
+
+
+<div id="org5952501" class="figure">
+<p><img src="./images/weechat.gif" alt="weechat.gif" />
+</p>
+</div>
+
+</section>
+<section>
+
+<p>
+<b>MCabber</b>, <b>profanity</b> — XMPP
+</p>
+
+<ul>
+<li>PGP</li>
+<li>OTR</li>
+<li>Plugins/Modules</li>
+<li>Multi-User chat</li>
+<li>Command completion</li>
+
+</ul>
+
+</section>
+<section>
+
+<p>
+profanity Pip-Boy
+</p>
+
+
+<div id="org0381e95" class="figure">
+<p><img src="./images/profanity.png" alt="profanity.png" />
+</p>
+</div>
+
+</section>
+<section>
+
+<p>
+<b>toxic</b> — Tox
+</p>
+
+<ul>
+<li>P2P</li>
+<li>For secure conversation</li>
+
+</ul>
+
+</section>
+<section>
+
+<p>
+<b>tg-cli</b> — Telegram, but telegram-desktop too
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-4-1-10">
+<h4 id="4-1-10"><span class="section-number-4">4.1.10</span> RSS, news</h4>
+<p>
+<b>newsboat</b>
+</p>
+
+<p>
+As mutt, but for RSS
+</p>
+
+
+<div id="org13eae31" class="figure">
+<p><img src="./images/newsboat.jpg" alt="newsboat.jpg" width="80%" />
+</p>
+</div>
+
+<aside class="notes">
+<p>
+В паре с mpv и youtube-dl можно сделать youtube клиент.
+</p>
+
+</aside>
+
+</section>
+<section>
+
+<p>
+<b>Telegram</b>
+</p>
+
+<p>
+Channels with bots, which sends RSS (Reddit, Twitter, HackerNews, Lobste.rs,
+etc) to channels.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-4-1-11">
+<h4 id="4-1-11"><span class="section-number-4">4.1.11</span> Remote desktop</h4>
+<ul>
+<li><p>
+Easy tasks
+</p>
+
+<p>
+ssh with X forwarding (use settings for compressing and encrypting traffic for
+speedup)
+</p></li>
+
+<li>Hard tasks
+<ul>
+<li>VNC</li>
+<li>qemu with SPICE + VNC</li>
+
+</ul></li>
+
+</ul>
+
+<aside class="notes">
+<p>
+Иногда необходимо удалённо запустить что-то тяжёлое в эмуляторе и ноутбуком
+подключиться, как тонким клиентом.
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-4-2">
+<h3 id="4-2"><span class="section-number-3">4.2</span> Multimedia</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-4-2-1">
+<h4 id="4-2-1"><span class="section-number-4">4.2.1</span> Image viewers</h4>
+<p>
+<b>Framebuffer</b> (energy saving)
+</p>
+
+<ul>
+<li><code>fbi</code></li>
+<li><code>fbv</code></li>
+
+</ul>
+
+<p>
+Don't forget configure tty!
+</p>
+
+</section>
+<section>
+
+<p>
+<b>Simple</b>
+</p>
+
+<ul>
+<li>feh
+<ul>
+<li>CLI and hotkey powerful</li>
+<li>Very simple (so no screenshots)</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section>
+
+<ul>
+<li>sxiv (more GUIably, than feh)</li>
+<li>vimiv (VIM image viewer)</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-4-2-2">
+<h4 id="4-2-2"><span class="section-number-4">4.2.2</span> ImageMagick</h4>
+<p>
+Very powerful image processing tool!
+</p>
+
+<p>
+Throw out your GIMP. A joke of course. Throw out your Photoshop.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-4-2-3">
+<h4 id="4-2-3"><span class="section-number-4">4.2.3</span> Music</h4>
+<p>
+<b>mpd</b>
+</p>
+
+<ul>
+<li>Server with clients:
+<ul>
+<li>mobile</li>
+<li>GUI</li>
+<li>TUI</li>
+<li>CLI</li>
+
+</ul></li>
+<li>mpdscribble (Last.fm)</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+Не люблю музыку на стриминговых сервисах, содержу свою библиотеку, синхронизирую
+между устройствами.
+</p>
+
+</aside>
+
+</section>
+<section>
+
+<p>
+ncmpcpp (mpd client)
+</p>
+
+
+<div id="org5712aac" class="figure">
+<p><img src="./images/ncmpcpp.png" alt="ncmpcpp.png" width="100%" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-4-2-4">
+<h4 id="4-2-4"><span class="section-number-4">4.2.4</span> Video</h4>
+<p>
+<b>Players</b>
+</p>
+
+<ul>
+<li>mpv — most powerful video/audio player</li>
+<li>cvlc — CLI version of VLC</li>
+
+</ul>
+
+</section>
+<section>
+
+<p>
+<b>FFmpeg</b>
+</p>
+
+<p>
+Converting, hardware rendering, screencasting, input/output many formats
+(camera, screens, devices).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-4-2-5">
+<h4 id="4-2-5"><span class="section-number-4">4.2.5</span> Metadata</h4>
+<p>
+Many interesting things you can know from metadata of video, images and data.
+</p>
+
+<ul>
+<li>ExifTool (audio, video, images, documents, etc)</li>
+<li>exiv2 (images)</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-4-3">
+<h3 id="4-3"><span class="section-number-3">4.3</span> Utilities</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-4-3-1">
+<h4 id="4-3-1"><span class="section-number-4">4.3.1</span> Terminal emulators</h4>
+<p>
+<b>urxvt (rxvt-unicode)</b>
+</p>
+<ul>
+<li>Old</li>
+<li>Universal</li>
+<li>Many patches and plugins developed in Perl</li>
+<li>Configurations in Xresources</li>
+
+</ul>
+
+</section>
+<section>
+
+<p>
+<b>Alacritty</b>
+</p>
+<ul>
+<li>GPU rendering</li>
+<li>Rust</li>
+<li>Many features</li>
+
+</ul>
+
+</section>
+<section>
+
+<p>
+<b>Kitty</b>
+</p>
+<ul>
+<li>GPU rendering</li>
+<li>Python</li>
+<li>More features (Unicode glyphs, many nice bindings, graphics, client-server
+SSH, multiplexer, etc)</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-4-3-2">
+<h4 id="4-3-2"><span class="section-number-4">4.3.2</span> Terminal multiplexer. tmux</h4>
+<p>
+Also <code>byobu</code> as more friendly and <code>screen</code> as older
+</p>
+
+
+<div id="org025d77a" class="figure">
+<p><img src="./images/tmux.png" alt="tmux.png" width="90%" />
+</p>
+</div>
+
+<aside class="notes">
+<ul>
+<li>Enables multiple windows and panes within a single terminal window</li>
+<li>Keeps windows and panes in a session</li>
+<li>Enables session sharing (great for pair programming)</li>
+
+</ul>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-4-3-3">
+<h4 id="4-3-3"><span class="section-number-4">4.3.3</span> File managers</h4>
+<p>
+<b>ranger</b>
+</p>
+
+<ul>
+<li>Many features</li>
+<li>Python</li>
+<li>Slow</li>
+
+</ul>
+
+</section>
+<section>
+
+<p>
+ranger interface
+</p>
+
+
+<div id="org589bcc2" class="figure">
+<p><img src="./images/ranger.png" alt="ranger.png" />
+</p>
+</div>
+
+</section>
+<section>
+
+<p>
+<b>vifm</b>
+</p>
+
+<ul>
+<li>C</li>
+<li>VIM</li>
+<li>Diffing</li>
+<li>Filtering</li>
+<li>Searching</li>
+<li>Batch renaming</li>
+
+</ul>
+
+</section>
+<section>
+
+<p>
+vifm interface
+</p>
+
+
+<div id="org8f587c9" class="figure">
+<p><img src="./images/vifm.png" alt="vifm.png" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-4-3-4">
+<h4 id="4-3-4"><span class="section-number-4">4.3.4</span> Git</h4>
+<p>
+You should learn it!
+</p>
+
+<p>
+I use it everywhere:
+</p>
+<ul>
+<li>control version</li>
+<li>backups</li>
+<li>diffing</li>
+<li>merging</li>
+<li>review</li>
+<li>messaging</li>
+<li>file system</li>
+<li>etc</li>
+
+</ul>
+
+</section>
+<section>
+
+<p>
+<b>Gitea</b>, <b>GitLab</b>, <b>GitWeb</b> as self-hosted Git-repository managers
+</p>
+
+
+<div id="org635d264" class="figure">
+<p><img src="./images/git-instaweb.png" alt="git-instaweb.png" width="75%" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-4-3-5">
+<h4 id="4-3-5"><span class="section-number-4">4.3.5</span> QEMU (KVM)</h4>
+<p>
+A free and open-source emulator and virtualizer that can perform hardware
+virtualization.
+</p>
+
+<ul>
+<li>User-mode and system emulation</li>
+<li>The emulation of various architectures and periphery</li>
+<li>TUI, CLI</li>
+<li>Integration</li>
+<li>Open Source</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-4-3-6">
+<h4 id="4-3-6"><span class="section-number-4">4.3.6</span> WINE</h4>
+<p>
+Wine Is Not an Emulator is a free and open-source compatibility layer that aims
+to allow application software and computer games developed for Microsoft Windows
+to run on Unix-like operating systems.
+</p>
+
+<ul>
+<li>Debugging</li>
+<li>Backward compatibility</li>
+<li>Non-x86 architectures</li>
+<li>RE of Windows</li>
+
+</ul>
+
+</section>
+<section>
+
+<p>
+Other versions and uses:
+</p>
+
+<ul>
+<li>CrossOver</li>
+<li>Cedega/WineX</li>
+<li>Darwine</li>
+<li>Pipelight</li>
+<li>Proton</li>
+<li>ReactOS</li>
+<li>Odin (OS/2)</li>
+<li>Parallels Desktop and VirtualBox</li>
+<li>WineD3D</li>
+<li>etc</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-4-3-7">
+<h4 id="4-3-7"><span class="section-number-4">4.3.7</span> Backups</h4>
+<p>
+<b>restic</b>
+</p>
+
+<p>
+Encrypted snapshots, many backends + systemd
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-4-4">
+<h3 id="4-4"><span class="section-number-3">4.4</span> Text editing</h3>
+<p>
+Use doc{,x}, ppt{,x}, xls{,x} and others if you really needed it.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-4-4-1">
+<h4 id="4-4-1"><span class="section-number-4">4.4.1</span> VIM</h4>
+
+<div id="org5028df1" class="figure">
+<p><img src="./images/vim_quit.jpeg" alt="vim_quit.jpeg" width="50%" />
+</p>
+</div>
+
+</section>
+<section>
+
+<ul>
+<li>Modern text editor (tabs, windows, buffers, syntax highlighting, spell
+checking, folding, etc)</li>
+<li>Modal editor (insert and normal modes + visual and line modes)</li>
+<li>Comprehensive help system</li>
+<li>Memory footprint is very low, faster than other</li>
+<li>Command centric. You can perform complex text related task with few commands</li>
+<li>Many plug-in available</li>
+<li>Native scripting (vimscript) and built-ins commands</li>
+<li>vimdiff, rview, rvim</li>
+<li>Ubiquitous</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-4-4-2">
+<h4 id="4-4-2"><span class="section-number-4">4.4.2</span> Emacs</h4>
+
+<div id="org74a619f" class="figure">
+<p><img src="./images/vim_vs_emacs.png" alt="vim_vs_emacs.png" width="70%" />
+</p>
+</div>
+
+</section>
+<section>
+
+<ul>
+<li>Client-server (share the buffer list, kill ring, undo and other)</li>
+<li>Pervasive help system with keybindings, functions and commands documented on
+the fly</li>
+<li>CLI, TUI, GUI</li>
+<li>Extensible and customizable Lisp programming language variant (Emacs Lisp)!..</li>
+
+</ul>
+
+</section>
+<section>
+
+<ul>
+<li>Ability to emulate vi and vim (using Evil, Viper or Vimpulse)</li>
+<li>A powerful and extensible file manager (dired), integrated debugger, and a
+large set of development and other tools</li>
+<li>Having every command be an Emacs Lisp function enables commands to DWIM (Do
+What I Mean). For example, a <code>switch-or-split-window</code></li>
+
+</ul>
+
+</section>
+<section>
+
+<p>
+"An OS inside an OS"
+<img src="./images/real_programmers.png" alt="real_programmers.png" />
+</p>
+
+<p class="fragment (appear)">
+Rust ♥️ Emacs = remacs
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-4-4-3">
+<h4 id="4-4-3"><span class="section-number-4">4.4.3</span> Spacemacs &amp; Doom</h4>
+<p>
+My choice:
+</p>
+
+<div class="column" style="float:left; width: 50%">
+
+<div id="orgd133251" class="figure">
+<p><img src="./images/spacemacs_logo.png" alt="spacemacs_logo.png" width="50%" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:left; width: 50%">
+
+<div id="orgfcbbe0c" class="figure">
+<p><img src="./images/doom_logo.png" alt="doom_logo.png" />
+</p>
+</div>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-4-4-4">
+<h4 id="4-4-4"><span class="section-number-4">4.4.4</span> Org-mode</h4>
+<p>
+Your Life in Plain Text
+</p>
+
+<ul>
+<li>Keeping notes</li>
+<li>Maintaining TODO lists</li>
+<li>Planning projects</li>
+<li>Authoring documents (à la Jupyter notebook, tablesheet, exporting to another
+formats)</li>
+
+</ul>
+
+<p class="fragment (appear)">
+This presentation created in org-mode and exported to HTML + reveal.js
+</p>
+
+<aside class="notes">
+<p>
+Использую для всего на свете: отчёты, заметки, презентации, планирование,
+научные работы.
+</p>
+
+</aside>
+
+</section>
+<section>
+
+<p>
+Planning
+</p>
+
+
+<div id="org0b7c737" class="figure">
+<p><img src="./images/org_mode_0.jpg" alt="org_mode_0.jpg" width="80%" />
+</p>
+</div>
+
+</section>
+<section>
+
+<p>
+Clocking
+</p>
+
+
+<div id="org8844bfb" class="figure">
+<p><img src="./images/org_mode_1.jpg" alt="org_mode_1.jpg" width="80%" />
+</p>
+</div>
+
+</section>
+<section>
+
+<p>
+Agendas
+</p>
+
+
+<div id="org120f29d" class="figure">
+<p><img src="./images/org_mode_2.jpg" alt="org_mode_2.jpg" width="80%" />
+</p>
+</div>
+
+</section>
+<section>
+
+<p>
+Capturing
+</p>
+
+
+<div id="org3172934" class="figure">
+<p><img src="./images/org_mode_3.jpg" alt="org_mode_3.jpg" width="80%" />
+</p>
+</div>
+
+</section>
+<section>
+
+<p>
+Tables
+</p>
+
+
+<div id="org586364b" class="figure">
+<p><img src="./images/org_mode_4.jpg" alt="org_mode_4.jpg" width="80%" />
+</p>
+</div>
+
+</section>
+<section>
+
+<p>
+Exporting
+</p>
+
+
+<div id="org86609c1" class="figure">
+<p><img src="./images/org_mode_5.jpg" alt="org_mode_5.jpg" width="80%" />
+</p>
+</div>
+
+</section>
+<section>
+
+<p>
+Working with source code
+</p>
+
+
+<div id="org0aa7ab4" class="figure">
+<p><img src="./images/org_mode_6.jpg" alt="org_mode_6.jpg" width="80%" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-4-4-5">
+<h4 id="4-4-5"><span class="section-number-4">4.4.5</span> LaTeX</h4>
+<div class="org-src-container">
+
+<pre class="src src-latex"><span style="color: #d3d3d3;">\mode</span>&lt;presentation&gt;
+{
+  <span style="color: #d3d3d3;">\usetheme</span>{dsec}
+  <span style="color: #d3d3d3;">\dsecset</span>{progressbar = frametitle}
+  <span style="color: #d3d3d3;">\dsecset</span>{subsectionpage = progressbar}
+}
+<span style="color: #268bd2; font-weight: bold;">\title</span>{<span style="color: #df005f; font-weight: bold;">Introduction to software-based</span>
+<span style="color: #df005f; font-weight: bold;"> microarchitectural side-channel attacks</span>}
+<span style="color: #d3d3d3;">\subtitle</span>{}
+
+<span style="color: #268bd2; font-weight: bold;">\author</span>{<span style="color: #df005f; font-weight: bold;">Abc Xyz</span><span style="color: #dc752f; font-weight: bold;">\\</span>
+<span style="color: #df005f; font-weight: bold;">@dura\_lex</span>}
+<span style="color: #d3d3d3;">\titlegraphic</span>{<span style="color: #d3d3d3;">\includegraphics</span>[height = 0.9cm]{logo.pdf}}
+
+<span style="color: #268bd2; font-weight: bold;">\date</span>{}
+<span style="color: #d3d3d3;">\subject</span>{Information security}
+</pre>
+</div>
+
+</section>
+<section>
+
+
+<div id="org20c6e25" class="figure">
+<p><img src="./images/latex_pdf.png" alt="latex_pdf.png" />
+</p>
+</div>
+
+</section>
+<section>
+
+<ul>
+<li>Typesetting journal articles, technical reports, books, and slide
+presentations</li>
+<li>Control over large documents containing sectioning, cross-references, tables
+and figures</li>
+<li>Typesetting of complex mathematical formulas</li>
+<li>Advanced typesetting of mathematics with AMS-LaTeX</li>
+<li>Automatic generation of bibliographies and indexes</li>
+<li>Multi-lingual typesetting</li>
+<li>Inclusion of artwork, and process or spot colour</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+Использую для больших докладов, научных работ. Записывал все лекции с помощью
+LaTeX.
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-4-4-6">
+<h4 id="4-4-6"><span class="section-number-4">4.4.6</span> Zathura</h4>
+<p>
+Simple PDF reader
+</p>
+
+<ul>
+<li>VIM bindings</li>
+<li>Automatic reloading document</li>
+<li>Synctex</li>
+<li>Recoloring, reformatting</li>
+<li>CLI</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-4-4-7">
+<h4 id="4-4-7"><span class="section-number-4">4.4.7</span> Markdown</h4>
+<p>
+Use for work
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-4-4-8">
+<h4 id="4-4-8"><span class="section-number-4">4.4.8</span> AsciiDoc</h4>
+<p>
+Use for <span class="underline"><b>real</b></span> work
+</p>
+
+<ul>
+<li>Including files</li>
+<li><a href="https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#lists">Normal
+lists with complex content</a></li>
+<li><a href="https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#links">Anchors</a></li>
+<li><a href="https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#images">Formatted
+images</a></li>
+<li><a href="https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#source-code">Powerful
+code blocks</a></li>
+<li>Comments</li>
+<li><a href="https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#tables">Tables
+for the people</a></li>
+<li>ToC</li>
+<li><a href="https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#bibliography">Bibliography</a></li>
+<li>etc</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-4-4-9">
+<h4 id="4-4-9"><span class="section-number-4">4.4.9</span> Pandoc</h4>
+<p>
+Markup converter
+</p>
+
+<div class="column" style="float:left; width: 50%">
+<ul>
+<li>Markdown</li>
+<li>reStructuredText</li>
+<li>AsciiDoc</li>
+<li>Org-Mode</li>
+<li>Textile</li>
+<li>HTML</li>
+<li>CSV</li>
+<li>EPUB</li>
+<li>roff</li>
+
+</ul>
+</div>
+<div class="column" style="float:left; width: 50%">
+<ul>
+<li>LaTeX</li>
+<li>DocBook</li>
+<li>OPML</li>
+<li>InDesign</li>
+<li>Wiki</li>
+<li>reveal.js</li>
+<li>Microsoft Word</li>
+<li>OpenOffice/LibreOffice</li>
+<li>etc</li>
+
+</ul>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-4-4-10">
+<h4 id="4-4-10"><span class="section-number-4">4.4.10</span> Spell checkers</h4>
+<p>
+Aspell, Hunspell + LanguageTool for grammars
+</p>
+
+<p>
+Use my personal dict everywhere (editors, browser, shell, edit fields)
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-4-4-11">
+<h4 id="4-4-11"><span class="section-number-4">4.4.11</span> Tesseract OCR</h4>
+<ul>
+<li>CLI</li>
+<li>API</li>
+<li>Multilanguages</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-4-5">
+<h3 id="4-5"><span class="section-number-3">4.5</span> Core utilities</h3>
+<ul>
+<li class="fragment appear">Standard utilities are old and have few features, but stable</li>
+<li class="fragment appear">The list below is alternatives, not replace</li>
+<li class="fragment appear">For scripts you should use first order applications for compatibility</li>
+<li class="fragment appear">It's normal, that more than half applications were developed in Rust language
+(r)</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-4-5-1">
+<h4 id="4-5-1"><span class="section-number-4">4.5.1</span> Bash — Zsh</h4>
+<ul>
+<li>Featured aliases (suffix and global)</li>
+<li>Easy directory navigation</li>
+<li>Advanced completion</li>
+<li>Globbing</li>
+<li>Command line editing</li>
+<li>Spelling correction</li>
+<li>Themes and plugins (Oh My Zsh, Prezto, Powerlevel9k, etc)</li>
+<li>etc</li>
+
+</ul>
+
+</section>
+<section>
+
+<p>
+Zsh features
+</p>
+
+
+<div id="orga23d613" class="figure">
+<p><img src="./images/zsh.gif" alt="zsh.gif" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-4-5-2">
+<h4 id="4-5-2"><span class="section-number-4">4.5.2</span> ls — lsd (r)</h4>
+<p>
+Colorized and with icons <code>ls</code>
+</p>
+
+
+<div id="orgdb3d1f6" class="figure">
+<p><img src="./images/lsd.png" alt="lsd.png" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-4-5-3">
+<h4 id="4-5-3"><span class="section-number-4">4.5.3</span> tree (ls) — exa (r)</h4>
+<p>
+More features and faster
+</p>
+
+</section>
+<section data-background="./images/exa.png">
+
+</section>
+</section>
+<section>
+<section id="slide-4-5-4">
+<h4 id="4-5-4"><span class="section-number-4">4.5.4</span> cat + less, more — bat (r)</h4>
+<ul>
+<li>Automatic paging</li>
+<li>Customization</li>
+<li>More features&#x2026;</li>
+
+</ul>
+
+</section>
+<section>
+
+<p>
+Syntax highlighting
+</p>
+
+
+<div id="org7dd49c3" class="figure">
+<p><img src="./images/bat_syntax.png" alt="bat_syntax.png" />
+</p>
+</div>
+
+</section>
+<section>
+
+<p>
+Git integration
+</p>
+
+
+<div id="orgfb264d6" class="figure">
+<p><img src="./images/bat_git.png" alt="bat_git.png" />
+</p>
+</div>
+
+</section>
+<section>
+
+<p>
+Show non-printable characters
+</p>
+
+
+<div id="orgf4b7b46" class="figure">
+<p><img src="./images/bat_print.png" alt="bat_print.png" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-4-5-5">
+<h4 id="4-5-5"><span class="section-number-4">4.5.5</span> cp, mv, rm — rsync</h4>
+<ul>
+<li>Fast and extraordinarily versatile file copying</li>
+<li>Progress bar</li>
+<li>Delta-transfer</li>
+<li>Client-server architecture</li>
+<li>Can replace <code>scp</code></li>
+<li>Can used as backup tool</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-4-5-6">
+<h4 id="4-5-6"><span class="section-number-4">4.5.6</span> du, df — ncdu</h4>
+<p>
+Interactive <code>du</code> and <code>df</code>
+</p>
+
+</section>
+<section>
+
+<p>
+ncdu
+</p>
+
+
+<div id="org4e128c2" class="figure">
+<p><img src="./images/ncdu.png" alt="ncdu.png" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-4-5-7">
+<h4 id="4-5-7"><span class="section-number-4">4.5.7</span> tar, (un)zip — bsdtar, 7z</h4>
+<p>
+tar + (un)zip = bsdtar
+</p>
+
+<ul>
+<li>Automatic format detection</li>
+<li>Handles file flags, ACLs, arbitrary pathnames, etc</li>
+<li>Library. <code>libarchive</code></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-4-5-8">
+<h4 id="4-5-8"><span class="section-number-4">4.5.8</span> find — fd (r)</h4>
+<ul>
+<li>Convenient syntax: <code>fd PATTERN</code> instead of <code>find -iname '*PATTERN*'</code></li>
+<li>Colorized terminal output (similar to ls)</li>
+<li>It's fast</li>
+<li>Smart case</li>
+<li>Ignores hidden directories and files, <code>.gitignore</code> by default</li>
+<li>Fast regular expressions</li>
+<li>Unicode-awareness</li>
+<li>The command name is 50% shorter* than find</li>
+<li>Parallel command execution with a syntax similar to GNU Parallel</li>
+
+</ul>
+
+</section>
+<section>
+
+
+<div id="org1f60773" class="figure">
+<p><object type="image/svg+xml" data="./images/fd.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-4-5-9">
+<h4 id="4-5-9"><span class="section-number-4">4.5.9</span> diff — git-diff, colordiff, delta (r)</h4>
+<p>
+Use <del>git-diff</del> <del>colordiff</del> <code>delta</code> for diffing!
+</p>
+
+
+<ul>
+<li>Language syntax highlighting with color themes</li>
+<li>Within-line highlights based on a Levenshtein edit inference algorithm</li>
+<li>Git style strings (foreground color, background color, font attributes) are
+supported for &gt;20 stylable elements</li>
+<li>Side-by-side view</li>
+<li>Line numbering</li>
+
+</ul>
+
+</section>
+<section>
+
+<ul>
+<li><code>diff-highlight</code> and <code>diff-so-fancy</code> emulation modes</li>
+<li>Stylable box/line decorations to draw attention to commit, file and hunk
+header sections.</li>
+<li><code>n</code> and <code>N</code> keybindings to move between files in large diffs, and between
+diffs in <code>log -p</code> views (<code>--navigate</code>)</li>
+
+</ul>
+
+</section>
+<section>
+
+<p>
+<code>delta</code> with line numbers
+</p>
+
+
+<div id="orgfcb2b25" class="figure">
+<p><img src="./images/delta_0.png" alt="delta_0.png" width="70%" />
+</p>
+</div>
+
+</section>
+<section>
+
+<p>
+<code>delta</code> with <code>side-by-side</code>
+</p>
+
+
+<div id="org1e6c970" class="figure">
+<p><img src="./images/delta_1.png" alt="delta_1.png" />
+</p>
+</div>
+
+</section>
+<section>
+
+<p>
+<b>vimdiff</b> (VIM), <b>ediff</b> (Emacs)
+</p>
+
+<p>
+Powerful interactive diffing tools
+</p>
+
+<p>
+3-way diff for merging
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-4-5-10">
+<h4 id="4-5-10"><span class="section-number-4">4.5.10</span> diffoscope</h4>
+<p>
+In-depth comparison of files, archives, and directories
+</p>
+
+<ul>
+<li>Compare many file formats (binary, archive)</li>
+<li>Fallback on hexdump comparison</li>
+<li>Fuzzy-matching to handle renamings</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-4-5-11">
+<h4 id="4-5-11"><span class="section-number-4">4.5.11</span> grep — ripgrep</h4>
+<ul>
+<li>Fastest (Rust's regex engine + paralleling)</li>
+<li>Unicode support by default</li>
+<li>Powerful regexp on Rust (but PCRE2 exist)</li>
+<li>Support searching files compressed (bzip2, gzip, lzma, xz, etc)</li>
+<li>Multiline searching</li>
+<li>Arbitrary input preprocessing filters</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-4-5-12">
+<h4 id="4-5-12"><span class="section-number-4">4.5.12</span> sed, {g,n,m}awk</h4>
+<p>
+If you are not using it yet, then it's time
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-4-5-13">
+<h4 id="4-5-13"><span class="section-number-4">4.5.13</span> (u)mount — udisks2</h4>
+<p>
+Mounting with user's permissions
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-4-5-14">
+<h4 id="4-5-14"><span class="section-number-4">4.5.14</span> pass</h4>
+<p>
+CLI pass manager. Powered by OpenPGP
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-4-5-15">
+<h4 id="4-5-15"><span class="section-number-4">4.5.15</span> fzf</h4>
+<p>
+A command-line fuzzy finder.
+</p>
+
+<p>
+Live demo
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-4-5-16">
+<h4 id="4-5-16"><span class="section-number-4">4.5.16</span> systemd</h4>
+<p>
+Not Unix way, but very useful
+</p>
+
+<ul>
+<li>Journal: system logging</li>
+<li>Timers: reasonable alternative to cron</li>
+<li>systemd-boot: UEFI boot manager</li>
+<li>systemd-logind: session manager</li>
+<li>systemd-networkd: network configuration management</li>
+
+</ul>
+
+</section>
+<section>
+
+<ul>
+<li>systemd-nspawn: light-weight namespace container</li>
+<li>systemd-resolved: network name resolution</li>
+<li>systemd-timesyncd: system time synchronization across the network</li>
+<li>systemd-tmpfiles: temporary files</li>
+<li>etc</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-4-5-17">
+<h4 id="4-5-17"><span class="section-number-4">4.5.17</span> Simple and useful tools for RE and life</h4>
+<ul>
+<li><code>man</code>, <code>apropos</code>, <code>mandb</code>: throw out the Internet, you have manuals</li>
+<li><code>tee</code>: read from standard input and write to standard output and files</li>
+<li><code>mktemp</code>: create a temporary file or directory</li>
+<li><code>tr</code>: translate or delete characters</li>
+<li><code>cut</code>: remove sections from each line of files</li>
+<li><code>od</code>, <code>xxd</code>, <code>hexdump</code>: custom hex view</li>
+<li><code>sort</code>, <code>uniq</code>, <code>comm</code>: sort, delete duplicates, compare output</li>
+
+</ul>
+
+</section>
+<section>
+
+<ul>
+<li><code>head</code>, <code>tail</code></li>
+<li><code>wc</code>: count of chars, lines, bytes</li>
+<li><code>strings</code></li>
+<li><code>iconv</code>: convert text from one character encoding to another</li>
+<li><code>file</code>: what is it?</li>
+<li><code>watch</code>: execute a program periodically, showing output</li>
+<li><code>shred</code>: burn after reading</li>
+
+</ul>
+
+</section>
+<section>
+
+<ul>
+<li><code>inotifywait</code>: wait for changes to files using inotify</li>
+<li><code>ls{blk,pci,cpu,usb,mod}</code>: block, PCI, CPU, USB devices, kernel modules</li>
+<li><code>sudo</code>, but not <code>su</code> (<code>sudoedit</code> for editing files): I'm root</li>
+<li><code>pgrep</code>, <code>pidof</code>: find process</li>
+<li><code>kill</code>, <code>pkill</code>, <code>killall</code>: then kill it</li>
+<li><code>ps</code>, <code>htop</code>: process list</li>
+<li><code>sleep</code>: Zzz&#x2026;</li>
+
+</ul>
+
+</section>
+<section>
+
+<p>
+<b>radare2</b>
+</p>
+
+<ul>
+<li>rabin2</li>
+<li>radiff2</li>
+<li>rafind2</li>
+<li>ragg2</li>
+<li>rahash2</li>
+<li>rarun2</li>
+<li>rasign2</li>
+<li>rasm2</li>
+<li>rax2</li>
+
+</ul>
+
+</section>
+<section>
+
+<p>
+r2
+</p>
+
+
+<div id="org04e37b3" class="figure">
+<p><img src="./images/r2.png" alt="r2.png" />
+</p>
+</div>
+
+</section>
+<section>
+
+<p>
+<b>binwalk</b>
+</p>
+
+<ul>
+<li>Disassembly scan</li>
+<li>Signature scan</li>
+<li>Extractions</li>
+<li>Entropy</li>
+<li>Binary diffing</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-4-5-18">
+<h4 id="4-5-18"><span class="section-number-4">4.5.18</span> Rust section</h4>
+<p>
+Install <code>rustup</code>: <a href="https://rustup.rs">https://rustup.rs</a>
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-shell">$ cargo install package_name
+</pre>
+</div>
+
+<p>
+and you on the horse!
+</p>
+
+</section>
+<section>
+
+<ul>
+<li><code>tokei</code>: inspect source code</li>
+<li><code>jq</code>: JSON prettifier</li>
+<li><code>xsv</code>: very fast parsing of large CSV files</li>
+<li><code>fselect</code>: searching on file system with SQL queries. <code>find</code> + <code>ls</code> + <code>awk</code></li>
+<li><code>bingrep</code>: color <code>readelf</code>, more powerful <code>grep</code> for ELF files</li>
+
+</ul>
+
+</section>
+<section>
+
+<ul>
+<li><code>ripgrepall</code>: find everywhere: binary files, PDFs, images, music, video, etc</li>
+<li><code>stringsext</code>: Better searching Unicode strings, but performance may be better</li>
+<li><code>tealdeer</code>: tldr, documentation</li>
+<li><code>topgrade</code>: upgrade your system</li>
+<li><code>choose</code>: a human-friendly and fast alternative to cut and (sometimes) awk</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-4-6">
+<h3 id="4-6"><span class="section-number-3">4.6</span> Windows managers</h3>
+<div class="outline-text-3" id="text-4-6">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-4-6-1">
+<h4 id="4-6-1"><span class="section-number-4">4.6.1</span> i3</h4>
+<ul>
+<li class="fragment appear">Minimalism (i3 is fast)</li>
+<li class="fragment appear">Screen real estate</li>
+<li class="fragment appear">Keyboard-driven workflow</li>
+<li class="fragment appear">Flexibility</li>
+<li class="fragment appear">Workspaces</li>
+
+</ul>
+
+<aside class="notes">
+<ul>
+<li>Меньше оперативной памяти, возможность запускать в контейнерах, виртуальных
+машинах. Устанавливаю только то, что мне нужно, нет ничего лишнего.</li>
+<li>Не нужно управлять окнами, всегда на полный экран.</li>
+<li>Абсолютно любое действие можно забиндить на клавишу. Мышь абсолютно не нужна.</li>
+<li>Из утилит (Unix-way) можно сделать любой DE, который тебе удобен.</li>
+<li>Рабочие пространства, на которых ты можешь чётко зафиксировать определённые
+программы, их расположение и поведение.</li>
+
+</ul>
+
+</aside>
+
+</section>
+<section>
+
+<p>
+Live demo
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-4-6-2">
+<h4 id="4-6-2"><span class="section-number-4">4.6.2</span> Panel</h4>
+<ul>
+<li>i3bar</li>
+<li>i3status</li>
+<li>i3status-rust</li>
+<li>i3blocks</li>
+<li>polybar</li>
+<li>conky</li>
+<li>j4status</li>
+<li>many many others</li>
+
+</ul>
+
+</section>
+<section>
+
+<p>
+Live demo
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-4-6-3">
+<h4 id="4-6-3"><span class="section-number-4">4.6.3</span> <del>dmenu</del> rofi</h4>
+<p>
+Featured dynamic menu for X.
+</p>
+
+</section>
+<section>
+
+<p>
+Live demo
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-4-6-4">
+<h4 id="4-6-4"><span class="section-number-4">4.6.4</span> dunst</h4>
+<p>
+Dunst is a highly configurable and lightweight notification daemon.
+</p>
+
+</section>
+<section>
+
+<p>
+Live demo
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-5">
+<h2 id="5"><span class="section-number-2">5</span> Life + IT Workflow</h2>
+<aside class="notes">
+<p>
+Я буду идти от чисто технических привычек к более жизненным ситуациям.
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-5-1">
+<h3 id="5-1"><span class="section-number-3">5.1</span> Configurations</h3>
+<p>
+One configuration for everything: PC, Laptop, Work, Guest/Virtual PC,
+Smartphone, Router, Server etc?
+</p>
+
+</section>
+<section>
+
+<ul>
+<li class="fragment appear">A custom shell scripts?</li>
+<li class="fragment appear">A bare git repo?</li>
+<li class="fragment appear">An existing dotfile manager: homeshick, rcm, GNU Stow, yadm, etc?</li>
+
+</ul>
+
+</section>
+<section>
+
+<p>
+Chezmoi — manage your dotfiles across multiple machines, securely.
+</p>
+
+<ul>
+<li>Flexible: OS (Linux, MacOS, Windows, FreeBSD, Termux), Arch, Hostname</li>
+<li>Personal and secure (1Password, Bitwarden, gopass, KeePassXC, LastPass, pass,
+Vault, CLI tool and GnuPG)</li>
+<li>Transparent: dry run mode, one-to-one map of files and symlinks</li>
+<li>Declarative (templates, metadata in names) and robust (atomic operations)</li>
+
+</ul>
+
+</section>
+<section>
+
+<p>
+<a href="https://github.com/saruman9/dotfiles">My Dotfiles</a>
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-5-1-1">
+<h4 id="5-1-1"><span class="section-number-4">5.1.1</span> File system cleanliness</h4>
+<ul>
+<li><code>chezmoi unmanaged</code> + <code>fzf</code> and ignored files</li>
+<li>Scripts for checking unneeded packages, installing packages</li>
+<li>Encrypted sensitive information and private repositories</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-5-1-2">
+<h4 id="5-1-2"><span class="section-number-4">5.1.2</span> Dark and light</h4>
+
+<div id="org8c4516a" class="figure">
+<p><img src="./images/red_eye.jpg" alt="red_eye.jpg" />
+</p>
+</div>
+
+<p>
+This eye are looking at you like a Winduzyatnik
+</p>
+
+</section>
+<section>
+
+<ul>
+<li>Auto switching temperature of display (without light detector)</li>
+<li>Auto switching dark/light themes (no universal solution)</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-5-2">
+<h3 id="5-2"><span class="section-number-3">5.2</span> VIM/Emacs everywhere</h3>
+<ul>
+<li class="fragment appear">Don't use a mouse, because it need more time, than a keyboard</li>
+<li class="fragment appear">A home row of your keyboard is your friend: speedup and economy (keyboard with
+lights)</li>
+<li class="fragment appear">Xdotool + Emacs = edit everything in Emacs</li>
+<li class="fragment appear">VIM/Emacs keymaps and modes everything: browser, IDE, windows manager,
+multiplexer, music player, torrent manipulation programs, mail, everything&#x2026;
+except Ghidra.</li>
+
+</ul>
+
+</section>
+<section>
+
+
+<div id="org487dc0b" class="figure">
+<p><img src="./images/vim_evangelism.png" alt="vim_evangelism.png" width="60%" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-5-3">
+<h3 id="5-3"><span class="section-number-3">5.3</span> Presentations, reports, documents, messages</h3>
+<p>
+Only plaintext:
+</p>
+<ul>
+<li>diffing, manipulation with CLI tool</li>
+<li>using version control system</li>
+<li>emails without HTML and JS shits (Yandex.Mail, you place is in the hell)</li>
+<li>more informative, more convertible, more security</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-5-3-1">
+<h4 id="5-3-1"><span class="section-number-4">5.3.1</span> How I use it</h4>
+<p>
+I can convert org-mode (asciidoc) to everything: plaintext, static HTML, LaTeX,
+PDF, presentations (beamer, reveal.js). I can generate books and reports from
+plaintext.
+</p>
+
+</section>
+<section>
+
+<p>
+I can share sources or make easy review and use parts of already wrote items.
+</p>
+
+</section>
+<section>
+
+<p>
+I have many notes with ideas, presentations in structured plaintext format in
+version control systems.
+</p>
+
+</section>
+<section>
+
+<p>
+I can sync all my documents (reports, books, presentations, ideas) between
+machines for working with it everywhere.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-5-4">
+<h3 id="5-4"><span class="section-number-3">5.4</span> Smartphone</h3>
+<ul>
+<li class="fragment appear">AOSP or similar</li>
+<li class="fragment appear">Open source utilities: F-Droid or GitHub + ADB</li>
+<li class="fragment appear">Termux for PC's work: SSH, running all Linux stuff (tmux, my Rust CLI
+programs), using Chezmoi configurations</li>
+<li class="fragment appear">Sync with other devices: passwords, web history, music playlists, etc</li>
+<li class="fragment appear">VPN for working with remote (home, work, laptops, other) devices</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-5-5">
+<h3 id="5-5"><span class="section-number-3">5.5</span> Subway workflow</h3>
+<ul>
+<li class="fragment appear">Reading issues, mailing lists, writing answers (GitLab, GitHub apps)</li>
+<li class="fragment appear">Reviewing PR/MR, fixing small bugs (IDE or VIM if exist keyboard)</li>
+<li class="fragment appear">Writing notes, drafts of presentation (including this) with <code>orgzly</code>
+(org-mode) and git for sync</li>
+<li class="fragment appear"><del>News from mail</del>, <del>RSS</del>, <del>RSS in Telegram</del>, I don't read news</li>
+<li class="fragment appear">Reading books on jailbroken Amazon Kindle (all formats and many features)</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-5-6">
+<h3 id="5-6"><span class="section-number-3">5.6</span> Other devices (router, multimedia box, etc)</h3>
+<ul>
+<li class="fragment appear">All works on ArchLinux</li>
+<li class="fragment appear">One configuration for everything</li>
+<li class="fragment appear">Pi-hole, logger, route table, DNS server, proxy server with TLS, etc (replaced
+by Mikrotik)</li>
+
+</ul>
+
+</section>
+<section>
+
+<p>
+Many firmwares are changed:
+</p>
+
+<ul>
+<li class="fragment appear">Bookreader is jailbroken</li>
+<li class="fragment appear">Printer is jailbroken</li>
+<li class="fragment appear">Digital music player is jailbroken (Rockbox OS)</li>
+<li class="fragment appear">Vacuum cleaner with Ubuntu but not jailbroken yet (but with Russian voice
+already)</li>
+<li class="fragment appear">I bought a car&#x2026;</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-5-7">
+<h3 id="5-7"><span class="section-number-3">5.7</span> Packages and open source</h3>
+<ul>
+<li>Need a new software? Search in repositories and install it, that's all.</li>
+<li>AUR or nix have many, many packages (<a href="https://repology.org/">Repology</a>),
+including for Windows OS, BlackArch have packages for penetration testers</li>
+
+</ul>
+
+</section>
+<section>
+
+<p>
+I have custom PKGBUILDs for all patched software (also cracks^Winitial settings
+for proprietary software).
+</p>
+
+<p>
+I'm <a href="https://github.com/saruman9/pkgbuilds/">maintainer of some packages in
+AUR</a> and I regulates other packages (asks to update, to delete, to change
+permissions of maintaining).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-5-8">
+<h3 id="5-8"><span class="section-number-3">5.8</span> Automate everything</h3>
+<p>
+If you do the same thing a second time, then it needs to be automated.
+</p>
+
+</section>
+<section>
+
+<ul>
+<li class="fragment appear">Analyzing the OS (packages, configurations, status, etc)</li>
+<li class="fragment appear">Smart notifications (TODO, pomodoro, honeypots, China'a attacks, etc)</li>
+<li class="fragment appear">Scraping of sites (buying tickets, news, generating API)</li>
+<li class="fragment appear">All around RE/pentest</li>
+<li class="fragment appear">Deleting complex ads (Yandex, for example)</li>
+<li class="fragment appear">Specific subjects</li>
+
+</ul>
+
+<p class="fragment (appear)">
+<del>JavaScript</del>, <del>PHP</del>, <del>Python</del>, Rust, Bash
+</p>
+
+<aside class="notes">
+<p>
+Первый раз — запись в ЦДО.
+</p>
+
+<p>
+Меня нет в социальных сетях, на некоторые пары я не ходил, но следить за
+информацией было необходимо, поэтому пришлось писать бота для VK, который
+отправлял мне все сообщения и документы из группы.
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-5-9">
+<h3 id="5-9"><span class="section-number-3">5.9</span> Statistics about everything</h3>
+<ul>
+<li>Finance budget</li>
+<li>Books</li>
+<li>Movies, serials, TV shows</li>
+<li>Sports activity</li>
+<li>Board games</li>
+<li>Quotes and situations from life</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+Я отказался от половины, т. к. не хватало времени, но из-за того, что у меня
+плохая память, я могу перечитать снова книгу, пересмотреть кино, не вижу
+прогресса в чём-то.
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-5-9-1">
+<h4 id="5-9-1"><span class="section-number-4">5.9.1</span> Text vs GUI</h4>
+<p>
+I uses text files for managing it all (filtering, creating reports, sharing
+information between machines), all is encrypted.
+</p>
+
+<aside class="notes">
+<p>
+Для части задач пришлось переключиться на GUI или сайт, т. к. мои родные не
+могут пользоваться теми же инструментами, что и я. Я регулярно экспортирую
+информацию и синхронизируюсь.
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-6">
+<h2 id="6"><span class="section-number-2">6</span> Summary</h2>
+<ul>
+<li class="fragment appear">Just a drop in the bucket
+<ul>
+<li><a href="https://github.com/jlevy/the-art-of-command-line">Master the command line</a></li>
+<li><a href="https://github.com/learnbyexample/Command-line-text-processing">A book about CLI</a></li>
+
+</ul></li>
+<li class="fragment appear">Technologies advances extremely rapidly</li>
+<li class="fragment appear">Productivity is more free time</li>
+<li class="fragment appear">It's only my workflow</li>
+
+</ul>
+
+<aside class="notes">
+<ul>
+<li>Малая часть, я не хотел делиться той информацией, что и так есть в интернете</li>
+<li>Нужен человек, который бы сообщал мне, что стоит попробовать, а что нет, т. к.
+на всё не хватает времени</li>
+<li>Использование эффективного workflow, инструментов не делает меня
+работоспособнее (я бы повесился работать много), это даёт мне больше времени
+на занятие чем-то более интересным.</li>
+<li>Ожидаю рассказа о вашем workflow</li>
+
+</ul>
+
+</aside>
+</section>
+</section>
+</div>
+</div>
+<script src="./reveal.js/js/reveal.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: true,
+center: true,
+slideNumber: 'c/t',
+rollingLinks: false,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'linear', // see README of reveal.js for options
+transitionSpeed: 'default',
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+ { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+</script>
+</body>
+</html>
