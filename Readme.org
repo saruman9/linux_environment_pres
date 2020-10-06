@@ -1556,7 +1556,7 @@ If you do the same thing a second time, then it needs to be automated.
 
 *** Text vs GUI
 
-I uses text files for managing it all (filtering, creating reports, sharing
+I use text files for managing it all (filtering, creating reports, sharing
 information between machines), all is encrypted.
 
 #+BEGIN_NOTES
@@ -1571,8 +1571,8 @@ information between machines), all is encrypted.
 - Just a drop in the bucket
   - [[https://github.com/jlevy/the-art-of-command-line][Master the command line]]
   - [[https://github.com/learnbyexample/Command-line-text-processing][A book about CLI]]
-- Technologies advances extremely rapidly
-- Productivity is more free time
+- Technologies are evolving extremely rapidly
+- Productivity = more free time
 - It's only my workflow
 
 #+BEGIN_NOTES
